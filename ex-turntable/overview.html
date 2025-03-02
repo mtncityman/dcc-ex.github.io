@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
+<meta content="EX-Turntable is a fully integrated turntable controller for EX-CommandStation. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
+<meta content="EX-Turntable EX-CommandStation EX-CS" name="keywords" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; DCC-EX Model Railroading  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=0b880bd3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://dcc-ex.com/ex-turntable/overview.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Purchasing" href="purchasing.html" />
+    <link rel="prev" title="EX-Turntable" href="index.html" />
+
+     
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L5X0KNBF0W');
+      </script>
+  
+
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../news/atom.xml"
+  title="DCC-EX News"
+/>
+
+
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a><script async src="https://cse.google.com/cse.js?cx=f19437345086341ed">
+</script>
+<div class="gcse-search"></div>
+
+<!-- DDG search widget,@author Juri Wornowitski,@version 3.0,@link https://www.plainlight.com/ddg -->
+<!-- <div id="widdget" style="width:100%;margin:10px 0;">
+    <style type="text/css">
+        #widdget input {display:block;height:30px;padding:4px;outline:none;border:1px solid #8d8d8d;border-right:0;box-sizing:border-box;border-radius:3px 0 0 3px;width:calc(100% - 41px);font-size:15px;} 
+        #widdget button {float:left;cursor:pointer;width:43px;height:30px;color:#fff;background-image:linear-gradient(#cacaca,#929292);border:0;border-radius:0 3px 3px 0;padding:0;} 
+        #widdget button:active {background-image:linear-gradient(#909090,#585858);} 
+        #widdget button:focus {outline:none;}
+    </style>
+    <form style="position:relative" onsubmit="this.elements[0].click();">
+        <div style="float:right;position:absolute;top:0;right:-2px;z-index:3">
+            <button type="submit" onclick="var v=this.parentElement.parentElement.elements[1].value;if (typeof gtag !== 'undefined') try{gtag('event','search',{'event_label':v});} catch(e){} else if (typeof ga !== 'undefined') try{ga('send','event','engagement','search',v);} catch(e){} window.open('https://duckduckgo.com?q='+encodeURIComponent(v)+'+site%3Ahttps%3A%2F%2Fdcc-ex.com%2F&kj=00a3b9ff&kx=%236c00a2&k9=%2300353d&k8=%23262626');return false;">&#128269;</button>
+        </div>
+        <input type="text" name="q" placeholder="Search with Duck Duck Go" />
+    </form>
+</div> -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../begin/what-to-know.html">Lets Get Started + Our Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../begin/levels.html">Ready-to-Run or Do-It-Yourself - Choose your Level</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Products</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../ex-commandstation/index.html">EX-CommandStation <br /> <span style="font-size: 75%"> (Ready-to-Run or Do-It-Yourself) </span></a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/rtr-index.html">Ready-To-Run - Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/rtr-purchasing.html">Purchasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/rtr-connecting.html">EX-CSB1 Quick Setup Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/rtr-wifi-setup.html">WiFi Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/installer-rtr.html">Install the Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/controllers-rtr.html">Choosing a Throttle (Controller)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/testing-rtr.html">Test Your Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-troubleshooting__included-rtr.html">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/rtr-manual.html">EX-CSB1 Operating Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/diy/index.html">Do-It-YourSelf - Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/diy/purchasing.html">Purchasing Parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/diy/assembly.html">Initial Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/diy/wifi-setup.html">Adding WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/installer-diy.html">Install the Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/controllers-diy.html">Choosing a Throttle (Controller)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/testing-diy.html">Test Your Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-troubleshooting__included-diy.html">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/advanced-setup/index.html">DIY - Advanced Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega (Recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/esp32.html">ESP32 (Recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/stm32-nucleo.html">STMicroelectronics Nucleo (Recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno (Not recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano (Not recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi (Not recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every (Deprecated)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy (Deprecated)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/ex-motor-shield-8874.html">DCC-EX EX-MotorShield8874 - 5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/index.html">Supported Connections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/direct.html">Direct Connection (USB)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/wifi-setup.html">WiFi Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/ethernet.html">Ethernet Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/bluetooth.html">Bluetooth Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-connections/jmri.html">JMRI Connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-wifi/index.html">Supported WiFi Shields and Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/makerfabs-esp8266.html">EX-WiFiShield 8266 (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../support/wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/bluetooth.html">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-installer/index.html">Install using EX-Installer</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../ex-installer/installing.html">Using EX-Installer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-installer/testing.html">Testing your installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-installer/managing-config-files.html">Managing config files</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/arduino-ide.html">Install using Arduino IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary-consolidated.html">Native Commands Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/turnouts/index.html">Turnouts/points</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turnouts/overview.html">Overview - types and options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turnouts/servo-turnouts.html">Servo driven turnouts/points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turnouts/solenoid-turnouts.html">Solenoid or coil turnouts/points</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/signals/index.html">Signals</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/signals/signal-overview.html">Signalling overview - types and options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/signals/light-signals.html">Light signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/signals/servo-signals.html">Semaphore or servo signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/signals/dcc-signals.html">DCC accessory signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/signals/signal-control.html">Controlling signals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/sensors/index.html">Sensors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/sensors/which-sensor-type.html">Which sensor type to use?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/sensors/ir-sensor.html">Infrared or IR sensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/index.html">Input and Output Accessories and Expanders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-ioexpander/index.html">EX-IOExpander</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/overview.html">Overview and configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/other-devices.html">Using other devices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander <br /> FAQ and Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/animation.html">Automation and Animation</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ex-commandstation/accessories/turntables/index.html">Turntables and traversers</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turntables/overview.html">Overview - types and options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turntables/dcc-turntables.html">DCC Turntables/traversers</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">EX-Turntable</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l5"><a class="reference internal" href="purchasing.html">Purchasing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l5"><a class="reference internal" href="layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l5"><a class="reference internal" href="configure.html">Configuration options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-installer/index.html">EX-Installer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ex-installer/installing.html">Using EX-Installer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-installer/testing.html">Testing your installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-installer/managing-config-files.html">Managing config files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-webthrottle/index.html">EX-WebThrottle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-csb1/index.html">EX-CSB1 Express</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/rtr-connecting__included-esb1.html">EX-CSB1 Quick Setup Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/rtr-wifi-setup__included-esb1.html">WiFi Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/installer-esb1.html">Install the Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/controllers-esb1.html">Choosing a Throttle (Controller)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/testing-esb1.html">Test Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support/ex-cs-troubleshooting__included-esb1.html">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/rtr-manual__included-esb1.html">EX-CSB1 Operating Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/hardware/motorboards/ex-motor-shield-8874.html">EX-MotorShield8874</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/hardware/wifi-boards/ex-wifi-shield-8266.html">EX-WiFiShield-8266</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-dccinspector/index.html">EX-DCCInspector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-toolbox/index.html">EX-Toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ex-toolbox/overview.html">EX-Toolbox - Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-toolbox/using.html">EX-Toolbox - Installing and Using</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">EX-CommandStation Add-Ons</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../exrail/index.html">EXRAIL <br /> <span style="font-size: 75%"> Automation &amp; Animation </span></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/editing.html">Editing myAutomation.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/creating-elements.html">Objects - an Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/getting-started.html">Sequences - an Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/examples.html">Example Objects and Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/tips.html">Tips and Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/about.html">About and History</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">EX-Turntable</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="purchasing.html">Purchasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traverser.html">Traversers and Limited Rotation Turntables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-ioexpander/index.html">EX-IOExpander</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/overview.html">Overview and configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/other-devices.html">Using other devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander <br /> FAQ and Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ex-fastclock/index.html">EX-FastClock</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/hardware.html">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/connect-existing.html">Configuration options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/cs-commands.html">Controlling EXRAIL by Time</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support &amp; Info</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Troubleshooting &amp; Getting Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../support/index-ex-cs.html">EX-CommandStation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-diagnose.html">Diagnosing Basic Problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../support/troubleshooting-decoders.html">Troubleshooting Decoders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support/contact-us.html">Contact Us</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../support/create-ticket.html">Submit a Support Ticket</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">Throttles (Controllers)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/protocols.html">WiThrottle Server, Web Server, DCC-EX Native Protocol Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/software/index.html">Throttles (Software)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../ex-webthrottle/index.html">EX-Web-Throttle (Web Browser)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/engine-driver.html">Engine Driver (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/jmri.html">JMRI (Java Model Railroad Interface)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/dccpp-cab.html">DCCpp CAB (android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/dccpp-throttle.html">DCC++ Throttle (android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/digitrainspro.html">DigiTrainsPro (Android, iOS, Windows)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/locontrol.html">Locontrol (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/railroad-automation.html">Railroad Automation (Windows)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/rtdrive-dccpp.html">RtDrive DCC++ (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/train-driver.html">Train Driver (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/throttlecard.html">ThrottleCard (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/trainnavigator.html">TrainNavigator (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/train-throttle.html">Train Throttle (Windows, Mac, iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/withrottle.html">WiThrottle (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/android-apps-on-windows.html">Android Apps on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/dccexcontroller.html">DccEXcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/engine-driver-physical-knobs.html">Adding a Physical Dial/Knob to Engine Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/ex-t3-wifi.html">EX-T3-WiFi (T3 = Tactile Touch Throttle)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/handcab.html">HandCab (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/lodi-con-wifi-throttle.html">LoDi-Con WiFi Throttle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/mybluepillthrottle.html">myBluePillThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/uwt50.html">TCS UWT-50 &amp; UWT-100 WiFi Throttles (Physical)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/connect_wifi_throttle_via_usb.html">Connecting WiFi Throttles via USB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/native-protocol-library.html">DCC-EX Native command library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../big-picture/index.html">The Big Picture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/big-picture.html">How it All Works Together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/stage1.html">Stage 1 - Running a Train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/stage2.html">Stage 2 - Adding a Roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/stage3.html">Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/stage4.html">Stage 4 - Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/stage5.html">Stage 5 - Turntables &amp; Traversers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../big-picture/stage5/turntable-example.html">Example - Turntable ROUTEs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../big-picture/stage5/traverser-example.html">Example - Turntable and traverser ROUTEs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../big-picture/stage6.html">Stage 6 - Putting it all Together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../big-picture/stage6/example1.html">Example 1 ROUTEs with turnouts/points/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../big-picture/stage6/example2.html">Example 2 ROUTEs with turnouts/points/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../big-picture/stage6/example3.html">Example 3 ROUTEs with turnouts/points/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../big-picture/stage6/example4.html">Example 4 ROUTEs with turnouts/points/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../big-picture/stage6/example5.html">Example 5 Full automation with turnouts/points &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../big-picture/stage6/example6.html">Example 6 Full automation with turnouts/points &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../big-picture/stage6/example7.html">Example 7 Full automation with turnouts/points &amp; signals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../download/index.html">Downloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-commandstation.html">EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/esp8266.html">ESP8266 (WiFi Boards)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-dccinspector.html">EX-DCCInspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-turntable.html">EX-Turntable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-ioexpander.html">EX-IOExpander</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-fastclock.html">EX-FastClock</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Purchasing &amp; Merchandise</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../purchasing/dealers.html">DCC-EX Official Dealers / Resellers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/accessories/index.html">DCC-EX Third Party Suppliers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers-full-cs.html">Full Command Stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers-cases.html">Cases / Enclosures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../merchandise/index.html">DCC-EX Merchandise</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Detailed Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/videos/index.html">Videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/downloads/index.html">Documents and Schematics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/documents.html">Documents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/downloads/schematics.html">Schematics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/hardware/index.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-decoder.html">Decoders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/decoder-notes.html">Decoder Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/wire-gauge.html">DCC Track Wiring Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/power-supplies.html">Power Supplies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega (Recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/esp32.html">ESP32 (Recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/stm32-nucleo.html">STMicroelectronics Nucleo (Recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno (Not recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano (Not recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi (Not recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every (Deprecated)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy (Deprecated)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/motor-boards.html">Supported Motor Drivers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/ex-motor-shield-8874.html">DCC-EX EX-MotorShield8874 - 5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/arduino-motor-shield.html">Arduino Motor Shield - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/deek-robot-motor-shield.html">Deek-Robot - 1.5A [RECOMMENDED]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/flashtree-motor-shield.html">Flashtree - 1.5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/diy-more-l298nh-motor-shield.html">DIY More L298NH - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/yfrobot-l298p.html">YFRobot L298P - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/L298N-motor-board-setup.html">L298N (dual) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/IRF3205-motor-board-setup.html">Dual Module H-bridge MOSFET IRF3205 - 15A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/pololu-mc33926.html">Pololu MC33926 - 3A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/miniibt-motor-driver-l6201p.html">MiniIBT L6201P (single) - 5A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/IBT_2-motor-board-setup.html">BTS7960 IBT_2 (single) - 43A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/keyes-fundumoto.html">Keyes/Fundumoto (&quot;Beeper Board&quot;) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/makerfabs-h-bridge-motor-shield.html">Makerfabs H-Bridge - 8A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/velleman-ka03-kit-vma03.html">Velleman KA03/VMA03 - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield.html">DFRobot 2x2A DC Motor Shield (DRI0009) - 2A</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/motor-board-config.html">Motor Driver Configuration Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/motorboards/high-accuracy.html">High Accuracy Waveform Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/wifi-boards.html">WiFi Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/ex-wifi-shield-8266.html">DCC-EX EX-WiFiShield 8266</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/makerfabs-esp8266.html">EX-WiFiShield 8266 (recommended)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/duinopeak-esp8266.html">Duinopeak ESP8266 WiFi Expansion Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/wangtongze-board.html">WangTongze Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/sparkfun-thing-plus.html">SparkFun Thing Plus (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/esp32-ant-01.html">ESP32_Ant-01 Breakout and Development Board (ESP32)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/wifi-boards/hc12-bridge.html">HC-12 Wireless Bridge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/ethernet-boards.html">Ethernet Boards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/arduino-ethernet-shield-2.html">Arduino Ethernet Shield 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/wiznet-wiz850io.html">Wiznet WIZ850IO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/sunfounder-ethernet-shield.html">Sunfounder Ethernet Shield</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/ethernet-boards/nano-ethernet-shield.html">Nano Ethernet Shield</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/bluetooth.html">Supported Bluetooth Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/hc-05-06.html">HC-05/06 Bluetooth Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/index-i2c.html">I2C Hardware</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-displays.html">I2C Displays</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/index.html">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/software/withrottle-vs-native-commands.html">WiThrottle Protocol VS DCC-EX Native Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/software/command-summary-consolidated.html">Native Commands Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/developers/index.html">Developer and API reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/api.html">DCC-EX Native API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal.html">DCC-EX HAL Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal-config.html">I/O Device Drivers and HAL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/writing-hal-driver.html">Writing a HAL Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/tools/index.html">Diagnostic Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/serial-monitor.html">Using a Serial Monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/index-diagnostics-d.html">Diagnostic d Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/tools/diagnostic-d-ack-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK&gt;</span></code> Command</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/tools/diagnostic-d-command.html">Diagnostics <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> Command</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/tools/diagnostic-tools.html">DCC Diagnostic Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projects/ProMiniAir_Transmitter_w_CommandStation.html">Battery Power, Radio Control: ProMiniAir Transmitter Integrated with a WiFi-equipped <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> (PMA Tx/WCS)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">External References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../external-references/index.html">Articles and Videos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external-references/standards.html">Standards &amp; technical references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/accessories/index.html">DCC-EX Third Party Suppliers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers-full-cs.html">Full Command Stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/accessories/suppliers-cases.html">Cases / Enclosures</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The DCC-EX Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About Us and the Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/about.html">Meet the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/licence.html">Licence &amp; Attributions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index-contributing.html">Donating &amp; Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/contributing/donate.html">Donate to Our Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/media-resources/index.html">Media Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/contributing/index.html"> Contributing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/github.html">GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/software.html">Recommended Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/development.html">Contributing to the Hardware &amp; Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/webthrottle.html">Contributing to EX-WebThrottle2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/website/index.html">Contributing to the Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/requirements.html">What You Need to Know/Learn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/getting-started.html">Documentation - Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/structure.html">Folder and Page Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/basic-rst.html">ReStructuredText Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/style-guide.html">Style Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/publishing-news.html">Publishing DCC-EX News Posts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/release-process.html">Versioning and the Release Process</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  
+    <li class="toctree-l1"><a href="https://dcc-ex.com/news.html">DCC-EX News</a></li>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: white" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DCC-EX Model Railroading</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../ex-commandstation/index.html">EX-CommandStation <br /> <span style="font-size: 75%"> (Ready-to-Run or Do-It-Yourself) </span></a></li>
+          <li class="breadcrumb-item"><a href="../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a></li>
+          <li class="breadcrumb-item"><a href="../ex-commandstation/accessories/turntables/index.html">Turntables and traversers</a></li>
+          <li class="breadcrumb-item"><a href="index.html">EX-Turntable</a></li>
+      <li class="breadcrumb-item active">Overview</li>
+  
+    
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/ex-turntable/overview.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+<p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-turntable.png"><img alt="EX-Turntable" class="image-product-logo-float-right" src="../_images/product-logo-ex-turntable.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+<section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../support/index.html#contact-support-options" title="Request help or support"><img src="../_static/images/buttons/support.png" style="height: 33px;" /></a> <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
+<aside class="sidebar-on-this-page sidebar">
+<nav class="contents local" id="on-this-page">
+<p class="topic-title">On this page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#what-is-ex-turntable" id="id1">What is EX-Turntable?</a></p></li>
+<li><p><a class="reference internal" href="#how-does-it-work" id="id2">How Does It Work?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#considerations-when-using-geared-steppers-turntables-and-or-microsteps" id="id3">Considerations when using geared steppers, turntables, and/or microsteps</a></p></li>
+<li><p><a class="reference internal" href="#important-phase-or-polarity-switching" id="id4">Important! Phase (or polarity) switching</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#next-steps" id="id5">Next Steps</a></p></li>
+</ul>
+</nav>
+</aside>
+<section id="what-is-ex-turntable">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">What is EX-Turntable?</a><a class="headerlink" href="#what-is-ex-turntable" title="Link to this heading"></a></h2>
+<p><a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> is a fully integrated turntable controller, using an additional Arduino (Nano or Uno) microcontroller to drive a stepper motor that rotates a turntable to align the bridge track with the surrounding layout tracks.</p>
+<p>While we aim to keep things simple, please note that there are complexities in setting up a turntable that tend to make <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> more in the realm of the <a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../begin/levels.html#tinkerer">Tinkerer</a> level user.</p>
+<p><span class="new-in-v5-4">New in version 5.4 </span></p>
+<p>To make things easier, a turntable object is now available to define and control both <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> and DCC controlled turntables, which also allows throttle developers to implement direct control of turntables if they so wish. More information on how to use this with <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> is on the <a class="reference internal" href="test-and-tune.html"><span class="doc">Testing, Tuning, and Control</span></a> page.</p>
+<p>It’s highly recommended running the latest of both <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> and <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> to ensure feature parity with the two, and ensure you have the latest bug fixes and so forth.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our <a class="reference internal" href="../support/contact-us.html"><span class="doc">Contact Us</span></a> methods and help us get <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> as easy to use and reliable as possible.</p>
+<p>For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> view of the <a class="reference external" href="https://github.com/orgs/DCC-EX/projects/7/views/1">DCC-EX GitHub project</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
+</div>
+<aside class="sidebar">
+<p class="sidebar-title">Supported stepper drivers and motors</p>
+<a class="reference internal image-reference" href="../_images/tinkerer.png"><img alt="Tinkerer Level" class="align-left" src="../_images/tinkerer.png" style="width: 48.0px; height: 48.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/engineer.png"><img alt="Engineer Level" class="align-right" src="../_images/engineer.png" style="width: 48.0px; height: 48.0px;" /></a>
+<p>Using other pre-defined, supported stepper drivers and motors are achievable at the <a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../begin/levels.html#tinkerer">Tinkerer</a> level, but may enter into <a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../begin/levels.html#engineer">Engineer</a> territory depending on the specific hardware.</p>
+</aside>
+<p>The <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> integration includes:</p>
+<ul class="simple">
+<li><p>Support for an Arduino Nano or Uno</p></li>
+<li><p>I<sup>2</sup>C device driver</p></li>
+<li><p><a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> automation support</p></li>
+<li><p>Debug/test command (handy for tuning step positions)</p></li>
+<li><p>Out-of-the-box support for several common stepper drivers and motors</p></li>
+<li><p>Traverser mode for horizontal/vertical traversers, and turntables that cannot rotate a full 360 degrees</p></li>
+<li><p>Automatic or manual DCC signal phase switching to align bridge track phase with layout phase (if your turntable doesn’t do this already)</p></li>
+<li><p>An LED and accessory output to control turntable specific automations (e.g. flashing warning light)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Credit where credit is due!</p>
+<p><strong>AccelStepper.h credit:</strong> This project would not be effective without the excellent work by Mike McCauley on the AccelStepper.h library that enables us to have somewhat prototypical acceleration and deceleration of the turntable. This library is included with the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> software (sans example sketches), and more details can be found on the official <a class="reference external" href="http://www.airspayce.com/mikem/arduino/AccelStepper/">AccelStepper</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> web page. Note as of version 0.7.0 there is no longer a need for modifications to the library.</p>
+<p><strong>NmraDcc.h credit:</strong> Also, while not directly used in this software, Alex Shephard’s “DCCInterface_TurntableControl” was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>. You can see this code as part of the <a class="reference external" href="https://github.com/mrrwa/NmraDcc">NmraDcc Arduino library</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
+</div>
+</section>
+<section id="how-does-it-work">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">How Does It Work?</a><a class="headerlink" href="#how-does-it-work" title="Link to this heading"></a></h2>
+<aside class="sidebar">
+<p class="sidebar-title">Full step, half step, and other modes</p>
+<p>Stepper motor drivers typically support more than one mode for driving stepper motors. This simply means that they can be turned less than one complete step, allowing more granular control of positioning, resulting in higher precision, and much smoother operation. For example, the DRV8825 can drive 1/32 of a step, talk about smooooth!</p>
+</aside>
+<p>If you’re not familiar with stepper motors then you only need a very basic understanding of how they work in order to use <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> successfully on your layout, as the concept is very simple.</p>
+<p>A stepper motor is able to be rotated one step at a time, which translates to degrees of movement around a circle. For example, the ubiquitous 28BYJ-48 stepper motor referred to here takes 2048 steps to make a full 360 degree rotation (in full step mode). The higher the number of steps in a single rotation, the easier it will be to get perfect alignment between the turntable and your layout, and this also typically translates to smoother rotation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You don’t actually need to know the number of steps required to make a full rotation as this is calculated by <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> the first time it starts up and performs the calibration sequence. You will see the number displayed in the serial console as outlined in <a class="reference internal" href="assembly.html#first-start-and-automatic-calibration"><span class="std std-ref">First start and automatic calibration</span></a>.</p>
+</div>
+<p>In <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>, at startup, the turntable will rotate until such time as the homing sensor is activated, in which case it will set the homed position as step 0 and stop moving. Typically, the homing sensor is a hall effect device mounted in the turntable pit which is activated when a magnet in one end of the turntable bridge comes in to close proximity.</p>
+<p>Once the home position is determined, the various positions on your layout are defined as the number of steps from this home position.</p>
+<p>The command used to move to these positions simply sends the number of steps to <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>, which calculates the steps required in order to move the least number of steps to the desired position, meaning it will rotate either clockwise or counter clockwise depending which is the shortest distance.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It’s recommended that the home position does not align with a specific layout connection track to ensure that each time <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.</p>
+</div>
+<p>Refer to the <a class="reference internal" href="test-and-tune.html"><span class="doc">Testing, Tuning, and Control</span></a> page for details on how to configure and control <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>.</p>
+<section id="considerations-when-using-geared-steppers-turntables-and-or-microsteps">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Considerations when using geared steppers, turntables, and/or microsteps</a><a class="headerlink" href="#considerations-when-using-geared-steppers-turntables-and-or-microsteps" title="Link to this heading"></a></h3>
+<p>Due to the HAL within <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, the maximum number of steps per rotation the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> device driver can address is 32767.</p>
+<p>If your physical turntable involves gearing, for example a small spur gear on the stepper driving a large gear connected to the turntable or you have a stepper with an inbuilt gearbox, you will need to know the gear ratio, and multiply that by the number of steps per rotation of your stepper motor. This would give a resultant step per rotation count that needs to be no more than 32767 steps.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># large gear teeth / # small gear teeth * stepper steps per rotation
+</pre></div>
+</div>
+<p>For example, if you have a large gear on the base of a turntable with 200 teeth which is driven by a 20 tooth spur gear on the stepper motor, that gives a gear ratio of 10:1 (200 / 20). If you then use the 28BYJ-48 stepper in half step mode with 4096 steps per revolution, this would result in 40960 steps per revolution with this gearing, meaning <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> will not be able to successfully address a full rotation.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Given a stepper motor needs to complete an entire, single step (or microstep) in one go, implementing a gear ratio that results in a fractional step count for a single, complete revolution will result in inaccuracies, as the step count will always be rounded to an integer. Always ensure the resultant steps per rotation will be a whole number before purchasing or building any geared stepper configuration.</p>
+</div>
+<p>In this scenario, running the 28BYJ-48 in full step mode (2048 steps) would allow this to work, as a full rotation is 20480 steps.</p>
+<p>When using stepper drivers such as the A4988, DRV8825, or TMC2208, these are able to be configured using microsteps, which again impacts the number of steps per revolution of the stepper.</p>
+<p>In the case of a DRV8825, the smallest microstep it can be configured for is 1/32, meaning a NEMA17 stepper with 200 steps per revolution in 1/32 microstep mode equates to 6400 steps per revolution.</p>
+<p>While this is well within the limit of the maximum 32767 steps in <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>, if you then use this in the same gear ratio calculated above, it will result in 64000 steps per revolution, which is well outside <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>’s limit.</p>
+<p>Introduced in <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> version 0.6.0, there is an option that allows for larger step counts than the maximum of 32767. This number is used as a multiplier for the number of steps sent from <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> and is set by defining <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">STEPPER_GEARING_FACTOR</span> <span class="pre">x</span></code> in your “config.h” file, where “x” is a number from 1 to 10.</p>
+<p>For example, if you had a step per revolution count of 60000 after calculating your gear ratio, you would set a gearing factor of 2, meaning all step counts configured in <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> are 30000 or less (60000 / 2), allowing for control of this configuration. Refer to <a class="reference internal" href="configure.html#stepper-gearing-factor"><span class="std std-ref">STEPPER_GEARING_FACTOR</span></a> for how to configure this option.</p>
+<p>If you have a need to set a gearing factor higher than 1, you will likely also need to adjust the <a class="reference internal" href="configure.html#sanity-steps"><span class="std std-ref">SANITY_STEPS</span></a> option to allow the calibration process to still function, as by default it will stop at 10000 steps.</p>
+</section>
+<section id="important-phase-or-polarity-switching">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Important! Phase (or polarity) switching</a><a class="headerlink" href="#important-phase-or-polarity-switching" title="Link to this heading"></a></h3>
+<p>An important aspect that must be taken into consideration with a rotating turntable is the phase or polarity of the turntable bridge track in relation to the surrounding layout tracks.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>If your locomotive drives on to the turntable bridge track, and the DCC phase (or polarity) is not aligned with the surrounding layout tracks, then you will cause a short circuit. The CommandStation should cut power in that scenario, but the desired behaviour is simply to drive onto the turntable with no interruption.</p>
+</div>
+<p>In order to prevent short circuits, the phase (or polarity) of the bridge track will need to be inverted when rotating to ensure it remains in alignment with the surrounding tracks. There are three options to achieve this:</p>
+<ul class="simple">
+<li><p>Use an auto-reverser that automatically reverses the phase when a short circuit is detected (the Digitrax AR1 is a commonly used option here)</p></li>
+<li><p>Use a mechanical method to switch the phase based on the physical position of the turntable</p></li>
+<li><p>Use <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> to automatically (or manually) invert the phase as appropriate</p></li>
+</ul>
+<p>The critical aspect when using <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>/<a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.</p>
+<p>Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> are connected to the same rail all the way along.</p>
+<p>If we do not invert or reverse the phase, when it rotates 180 degrees, there will be an obvious issue!</p>
+<a class="reference internal image-reference" href="../_images/0degree-phase.png"><img alt="No rotation" src="../_images/0degree-phase.png" style="width: 337.5px; height: 190.8px;" /></a>
+<a class="reference internal image-reference" href="../_images/90degree-no-phase-change.png"><img alt="90 degrees" src="../_images/90degree-no-phase-change.png" style="width: 339.3px; height: 198.9px;" /></a>
+<a class="reference internal image-reference" href="../_images/180degree-no-phase-change.png"><img alt="180 degrees" src="../_images/180degree-no-phase-change.png" style="width: 337.5px; height: 192.6px;" /></a>
+<p>Now consider inverting or reversing the phase when performing that 180 degree turn, and the result is just like the starting point, with all tracks in DCC phase alignment.</p>
+<a class="reference internal image-reference" href="../_images/0degree-phase.png"><img alt="No rotation" src="../_images/0degree-phase.png" style="width: 337.5px; height: 190.8px;" /></a>
+<a class="reference internal image-reference" href="../_images/90degree-phase-change.png"><img alt="90 degrees" src="../_images/90degree-phase-change.png" style="width: 339.3px; height: 198.9px;" /></a>
+<a class="reference internal image-reference" href="../_images/180degree-phase-change.png"><img alt="180 degrees" src="../_images/180degree-phase-change.png" style="width: 337.5px; height: 190.8px;" /></a>
+<section id="how-does-this-work-with-ex-turntable">
+<h4>How does this work with EX-Turntable?<a class="headerlink" href="#how-does-this-work-with-ex-turntable" title="Link to this heading"></a></h4>
+<p><a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> supports automatic phase switching by default, but can also be controlled manually by both <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> and diagnostic commands.</p>
+<p>With the default automatic phase switching, once the turntable rotates 45 degrees away from the home position, it will automatically invert the DCC phase, with the phase then reverting 180 degrees later once the turntable rotates to 225 degrees from the home position.</p>
+<p>In the diagrams below, the “home” end of the turntable bridge is indicated by the bright green sleeper, with the “home” position of 0 degrees being located at the top of the diagram. The surrounding layout tracks are separated by 10 degrees.</p>
+<p>The yellow dashed line represents the 45/225 degree trigger points to invert and revert the phase switching, with the light yellow shaded area representing the 180 degrees in which the phase will be inverted.</p>
+<p>The surrounding layout tracks have been wired so that each opposing track is wired the same.</p>
+<p>To start, the turntable bridge is aligned with the first layout track, which is 10 degrees from the home position, and all our phases are in alignment.</p>
+<a class="reference internal image-reference" href="../_images/auto-phase-switch-start.png"><img alt="Aligned with first track" src="../_images/auto-phase-switch-start.png" style="width: 467.0px; height: 523.0px;" /></a>
+<p>Next, we’ve sent a command for the turntable to rotate 180 degrees, which requires our phase to be inverted in order to prevent a short circuit.</p>
+<p>As this will trigger the turntable to rotate beyond our 45 degree trigger point, the phase will automatically be inverted.</p>
+<a class="reference internal image-reference" href="../_images/auto-phase-switch-trigger.png"><img alt="Rotate beyond 45 degrees" src="../_images/auto-phase-switch-trigger.png" style="width: 467.0px; height: 523.0px;" /></a>
+<p>Once the turntable reaches the correct position, all our phases will be in alignment, meaning our locomotive can leave or enter the turntable with no short circuit issues.</p>
+<a class="reference internal image-reference" href="../_images/auto-phase-switch-end.png"><img alt="Rotated 180 degrees" src="../_images/auto-phase-switch-end.png" style="width: 467.0px; height: 523.0px;" /></a>
+<p>If the turntable continues to rotate beyond the 225 degree point, the phase will revert again.</p>
+<a class="reference internal image-reference" href="../_images/auto-phase-switch-revert.png"><img alt="Rotated 180 degrees" src="../_images/auto-phase-switch-revert.png" style="width: 467.0px; height: 523.0px;" /></a>
+<p>The above outlines how the default automatic phase switching works with <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>, and this behaviour is configurable.</p>
+<p>If you find that the default 45/225 degree angles aren’t right for your layout, then this can be modified in “config.h” which is created in <a class="reference internal" href="../ex-commandstation/installer-diy.html"><span class="doc">Install the Software</span></a>, and the configuration parameter is outlined here: <a class="reference internal" href="configure.html#phase-switch-angle"><span class="std std-ref">PHASE_SWITCH_ANGLE</span></a>.</p>
+<p>If you have a layout that requires more control over when phase switching does and doesn’t happen, you can configure manual phase switching, as outlined in <a class="reference internal" href="test-and-tune.html#manual-phase-switching"><span class="std std-ref">Manual phase switching</span></a>.</p>
+<p><hr class="hr-heavy" /></p>
+</section>
+</section>
+</section>
+<section id="next-steps">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Next Steps</a><a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>Now that you have a general overview of EX-Turntable’s features and capabilities, click the ‘Next’ button see what is needed to create an <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>.</p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+  
+  
+</div>
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="EX-Turntable" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="purchasing.html" class="btn btn-neutral float-right" title="Purchasing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2025 DCC-EX Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+    <jinja2.runtime.BlockReference object at 0x7fd1b1849210>
+    <div class="topOfPage">
+    <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
+    </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
+  
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

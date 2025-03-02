@@ -1,0 +1,1108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://dcc-ex.com</id>
+  <title>DCC-EX News</title>
+  <updated>2025-03-02T18:30:02.439169+00:00</updated>
+  <link href="https://dcc-ex.com"/>
+  <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20250301.html</id>
+    <title>Announcing EX-CommandStation 5.4.0</title>
+    <updated>2025-03-01T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="announcing-ex-commandstation-5-4-0"&gt;
+
+&lt;p&gt;The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are excited to announce a new Production release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with version 5.4.0 being made available today. As usual, this release includes a raft of &lt;strong&gt;new features and enhancements&lt;/strong&gt; to bring even more capability and joy to your digital model railroading experience! We’re also announcing changes to our &lt;strong&gt;supported hardware platforms&lt;/strong&gt;.&lt;/p&gt;
+&lt;section id="new-features-and-enhancements"&gt;
+&lt;h2&gt;New features and enhancements&lt;/h2&gt;
+&lt;p&gt;Just check out this list of features and enhancements added since our last release:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Turntables can now be operated from throttles just like turnouts, including new &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; commands for automation of turntable movement&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Auto reverser and booster mode for the ESP32 platform is in Beta&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Delay can be added to the startup of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; to allow peripheral devices to boot or start first&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Various HAL enhancements, including our native, non-blocking I&lt;sup&gt;2&lt;/sup&gt;C capability for the STM32F4xx family of Nucleo platforms&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Variable DC frequency support in TrackManager, using DCC function keys 29 - 31 to set the desired frequency whilst running&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Broadcasting of route/automation state changes to throttles&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;New &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; specific commands and enhancements:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Various new ROUTE related commands - See &lt;a class="reference internal" href="exrail/exrail-command-reference.html#scripts-sequences-types-and-control"&gt;&lt;span class="std std-ref"&gt;Scripts/Sequences - Types and Control&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;JMRI_SENSOR(vpin [,count])&lt;/strong&gt; - creates &amp;lt;s&amp;gt; type sensors visible to jmri&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Blinking/flashing vpin and amber signal - &lt;strong&gt;BLINK( pin, onms, offms )&lt;/strong&gt; - blink an output pin&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New &lt;strong&gt;ONBUTTON( vpin )&lt;/strong&gt; - event handler for debounced button presses and &lt;strong&gt;ONSENSOR( sensor_id )&lt;/strong&gt; - event handler for sensors&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;dl class="simple"&gt;
+&lt;dt&gt;Compile time checks for:&lt;/dt&gt;&lt;dd&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;duplicate or missing automation/route IDs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;LATCH and RESERVE IDs out of range&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;speeds out of range&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="changes-to-supported-hardware-platforms"&gt;
+&lt;h2&gt;Changes to supported hardware platforms&lt;/h2&gt;
+&lt;p&gt;We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended hardware platform for &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;, with the Uno and Nano backing it up as alternatives, albeit with less I/O and resources available compared with the Mega2560. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.&lt;/p&gt;
+&lt;p&gt;Along with our &lt;a class="reference internal" href="news/posts/20230807.html"&gt;&lt;span class="doc"&gt;Version 5 is here!&lt;/span&gt;&lt;/a&gt; announcement back in August 2023, we also announced some new Beta hardware platforms including the ESP32-WROOM and select STMicroelectronics Nucleo STM32F4xx family boards. These boards are now largely moving into full support as they have proven to be reliable and provide a lot more “bang for your buck” in terms of capabilities and future proofing your &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with the continuing new features being added.&lt;/p&gt;
+&lt;p&gt;Moving forwards, we &lt;strong&gt;highly recommend new users seriously consider these newer, more powerful ESP32 or Nucleo boards&lt;/strong&gt; as the pricing is competitive even compared with clone Mega2560 options, and as they have much more RAM they will scale to be able to animate and automate much larger layouts and allow you to keep up with the development of the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; ecosystem.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Arduino UNO and Nano&lt;/strong&gt;, however, are &lt;strong&gt;no longer recommended&lt;/strong&gt; as fully capable platforms as they are just too limited in terms of RAM and FLASH resources and capability to fit all of the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; feature set. They therefore will not work with some of our newest features such as &lt;a class="reference internal" href="trackmanager/index.html"&gt;&lt;span class="doc"&gt;TrackManager (DCC &amp;amp; DC)&lt;/span&gt;&lt;/a&gt; or I&lt;sup&gt;2&lt;/sup&gt;C connectivity. &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; does allow users to turn off features such that UNOs and Nanos can still be handy as dedicated programming only devices with &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; or for simple Christmas layouts of course, but don’t expect to be using any of our newest or resource hungry features on these devices. They can also be re-purposed as versatile and affordable I&lt;sup&gt;2&lt;/sup&gt;C accessory devices with our new &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt;, as they can provide a mix of digital GPIO, PWM output, and analog inputs on a single board.&lt;/p&gt;
+&lt;p&gt;We now have a larger number of core platforms to support so need to rationalise our support of some legacy platforms. Also, a number of previously supported platforms are no longer available to the primary &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team for testing and validation. As a result, we are announcing the &lt;strong&gt;deprecation of support for some platforms&lt;/strong&gt;, and these will no longer function with &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; when we release our next major version 6.0.0. Support for these right now is limited to ensuring the software compiles, as no testing is possible by the team.&lt;/p&gt;
+&lt;p&gt;Read below for a summary of the changes to our supported hardware platforms.&lt;/p&gt;
+&lt;section id="supported-and-recommended-platforms"&gt;
+&lt;h3&gt;Supported and recommended platforms&lt;/h3&gt;
+&lt;p&gt;New users should choose one of these platforms to make use of all features and capabilities.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/arduino-mega.html"&gt;&lt;span class="doc"&gt;Arduino Mega (Recommended)&lt;/span&gt;&lt;/a&gt; genuine Arduino Mega 2560 R3, and good quality clones - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(link to new page here) ESP32 moves from Beta into full support - note this is for devices using the &lt;strong&gt;ESP32-WROOM (ESP32-D0WD) CPU only&lt;/strong&gt;, other ESP32 variants such as C3, S3, etc. are not supported at this time and may never be due to hardware limitations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(link to new page here) STMicroelectronics Nucleo boards in the STM32F4xx family move from Beta into full support for DCC only - note that DC mode and Ethernet support for these is still in Beta&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="no-longer-recommended-platforms"&gt;
+&lt;h3&gt;No longer recommended platforms&lt;/h3&gt;
+&lt;p&gt;No new features will be available for these, but they can still be handy for dedicated programming or small demo layouts. Note that an ESPduino32 has the same format as an Uno, is probably less expensive, and has full capabilities including WiFi.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/arduino-uno.html"&gt;&lt;span class="doc"&gt;Arduino Uno (Not recommended)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/nano.html"&gt;&lt;span class="doc"&gt;Arduino Nano (Not recommended)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="deprecated-platforms"&gt;
+&lt;h3&gt;Deprecated platforms&lt;/h3&gt;
+&lt;p&gt;The team no longer has hardware to test these boards, so we ensure the software compiles for them only, and no testing is performed. They will be removed when we release 6.0.0.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/nano-every.html"&gt;&lt;span class="doc"&gt;Nano Every (Deprecated)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/teensy.html"&gt;&lt;span class="doc"&gt;Teensy (Deprecated)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Arduino Mega328&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Arduino Uno WiFi R2&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SAMD21&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Arduino M0&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="jmri-specific-updates"&gt;
+&lt;h2&gt;JMRI specific updates&lt;/h2&gt;
+&lt;p&gt;Given there are a lot of &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; users who also utilise &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt;, we figured it was worthwhile outlining some more specific updates centred around &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; and the interoperability with it.&lt;/p&gt;
+&lt;p&gt;Note these all require &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; v5.7 or later AND &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; v5.4.0 or later.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;‘Roster Export to DCC-EX’ - the ability to press a button and have your complete &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; Engine Roster shown in a window which you can then copy into your DCC-EX Roster&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; ‘Virtual LCD Displays’ on &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; to see data about your &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; and additional user data without having to have physical LCDs or OLEDs connected to your command station&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Monitor, Send Command, and Config Base Station now multi-connection-aware&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Config Base Station now available as Startup action in Preferences&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New ‘Open Meter’ pane in Preferences -&amp;gt; Set Up -&amp;gt; Add -&amp;gt; Perform action -&amp;gt; ‘Open Meters’&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DCC++ Current Meter now automatically tracks &amp;amp; displays active current draw on Main A&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sample script (SendDCCppMessages.py) to easily send DCCpp commmands to run &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; scripts directly from &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Throttles now default to Forward instead of Reverse&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Handles new locoState reply to sync Speed, Dir and F-keys&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Throttle commands and replies added to simulator&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New servo and vpin turnout messages now supported&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Automatic population of the &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; Sensor pane by using the new &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; JMRI_SENSOR function&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Store definitions as properties in created objects&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improved CV read speeds by including startVal feature&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DCCppOverTCP server now forwards all messages&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20250301.html" rel="alternate"/>
+    <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are excited to announce a new Production release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with version 5.4.0 being made available today. As usual, this release includes a raft of new features and enhancements to bring even more capability and joy to your digital model railroading experience! We’re also announcing changes to our supported hardware platforms.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="release" label="release"/>
+    <published>2025-03-01T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20250128.html</id>
+    <title>If you have an issue uploading to an EX-CSB1</title>
+    <updated>2025-01-28T00:00:00+00:00</updated>
+    <author>
+      <name>Fred Decker (FlightRisk)</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="if-you-have-an-issue-uploading-to-an-ex-csb1"&gt;
+
+&lt;p&gt;We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device). This seems to be an issue with some USB ports on some Windows machines, but no matter what operating system or computer you have (including a Raspberry Pi) please follow these instructions to fix the issue and report it to us along with what fixed it for you.&lt;/p&gt;
+&lt;p&gt;#1. &lt;strong&gt;Make sure you have a CH340 driver installed&lt;/strong&gt; Windows does not come with CH340 support. If this is the first time you have tried to use a device with a CH340 chip, you need to install the driver as shown in &lt;a class="reference internal" href="ex-commandstation/rtr-manual.html#step-2-install-the-required-usb-drivers"&gt;&lt;span class="std std-ref"&gt;Step 2: Install the Required USB Drivers&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;#2. &lt;strong&gt;Make sure you are connected to the correct com port&lt;/strong&gt; Some Windows machines can have a confusing array of com ports used internally, for Bluetooth, or for other connected devices. Check the Windows Device Manager to verify the port you select in the installer is the CH340 driver used by the CSB1. You can disconnect and reconnect the CSB1’s USB cable and see the port disappear and re-appear. Here COM5 is the correct port:&lt;/p&gt;
+&lt;img alt="Windows Device Manager COM Ports Image" class="align-center" src="https://dcc-ex.com/_images/dev_mgr_com_ports.png" style="width: 481.59999999999997px; height: 151.89999999999998px;" /&gt;
+&lt;p&gt;#3. &lt;strong&gt;Try a different cable.&lt;/strong&gt; Our number one issue is dodgy cables. Some USB cables are “charging only” and do not have all the pins inside connected to be able to transmit data. Even if you have a data cable, try another one anyway, preferably not one of the exact same brand. We have seen a surprising number of poor quality or invisibly damaged cables.&lt;/p&gt;
+&lt;p&gt;#4.     &lt;strong&gt;Try a different USB port.&lt;/strong&gt; If you have multiple USB ports on your computer, try a different one. In particular, we have seen USB 3.0 ports that did not work when a USB 2.0 did or visa versa.&lt;/p&gt;
+&lt;p&gt;#5.     &lt;strong&gt;Try a different computer.&lt;/strong&gt; Very few computers show the issue, so there is a good chance that if one computer does not work, a different one will. If you have a computer with a different operating system, like Linux or MacOS, give that a try.&lt;/p&gt;
+&lt;p&gt;#6.     &lt;strong&gt;Insert a capacitor into the RESET and GND header pins.&lt;/strong&gt; If the issue is not remedied by any of the previous solutions, then we can fix it by adding a capacitor between RESET and GND. Find a 1 to 10uF capacitor. Ceramic capacitors are not polarized. If you use a Tantalum or Electrolytic type, MAKE SURE TO USE THE CORRECT POLARITY. Note that on polarized capacitors, the positive leg is longer. There is also a “+” marking on Tantalum’s and a stripe on the negative side for Electrolytics. The pins are clearly labeled on the underside of the CSB1 to help you identify RESET and GND. GND is negative.&lt;/p&gt;
+&lt;img alt="Capacitors" class="align-center" src="https://dcc-ex.com/_images/capacitors.png" style="width: 336.8px; height: 232.8px;" /&gt;
+&lt;p&gt;Here is a capacitor inserted into the correct pins in the header. For a permanent install, the capacitor can be soldered under the board between Reset and the closest GND solder point.&lt;/p&gt;
+&lt;img alt="Capacitors" class="align-center" src="https://dcc-ex.com/_images/capacitor_fix.png" style="width: 250.5px; height: 309.0px;" /&gt;
+&lt;p&gt;We are currently testing some changes that may lead to an update in EX-Installer and/or the EX-CSB1 to compensate for the issue. We need to make sure any hardware change does not affect anything else. It would not be good to be able to upload and then find your nice, shiny, Command Station won’t reboot into operating mode. If you have the issue and are a Tinkerer or an Engineer, you may be able to help us since no one on the development team has a problem computer. You could be a valuable resource to help us beta test the best solution.&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20250128.html" rel="alternate"/>
+    <summary>We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device). This seems to be an issue with some USB ports on some Windows machines, but no matter what operating system or computer you have (including a Raspberry Pi) please follow these instructions to fix the issue and report it to us along with what fixed it for you.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="ex-csb1" label="ex-csb1"/>
+    <published>2025-01-28T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20241220.html</id>
+    <title>DCC-EX Releases EX-CSB1 Ready to Run DCC CommandStation</title>
+    <updated>2024-12-20T00:00:00+00:00</updated>
+    <author>
+      <name>Paul Antoine</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="dcc-ex-releases-ex-csb1-ready-to-run-dcc-commandstation"&gt;
+
+&lt;p&gt;DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the second of our open source hardware products: the &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&amp;thinsp;/&amp;thinsp;Booster One Express&lt;/span&gt;&lt;/a&gt; CommandStation and Booster, providing dual 5 amp &lt;a class="reference internal" href="reference/hardware/dcc-vs-dc.html"&gt;&lt;span class="doc"&gt;DCC&lt;/span&gt;&lt;/a&gt; and &lt;a class="reference internal" href="reference/hardware/dcc-vs-dc.html"&gt;&lt;span class="doc"&gt;DC PWM&lt;/span&gt;&lt;/a&gt; (pulse width modulation) output.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&amp;thinsp;/&amp;thinsp;Booster One Express&lt;/span&gt;&lt;/a&gt; addresses the needs of DCC-EX users who want a ready-to-run DCC and DC CommandStation that will have them running trains within 5 minutes of plugging it into power and track.&lt;/p&gt;
+&lt;p&gt;With its built-in fast WiFi capability, up to 10 users can connect simultaneously using a phone or tablet in addition to commercially available throttles, in order to run trains and control their entire layout.&lt;/p&gt;
+&lt;img alt="DCC-EX EX-CSB1" src="https://dcc-ex.com/_images/csb1_render_drop_shadow.png" style="width: 193.0px; height: 138.5px;" /&gt;
+&lt;p&gt;A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&amp;thinsp;/&amp;thinsp;Booster One Express&lt;/span&gt;&lt;/a&gt; is the  second offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire.&lt;/p&gt;
+&lt;p&gt;Featuring an ESP32 processor with built-in fast WiFi, and dual 5A output Texas Instruments MOSFET motor drivers, the EX-CSB1 features the same proven reliable output stage as the previous EX-MotorShield8874. The DRV8874 H-Bridge ICs also include hardware overcurrent protection monitored by EX-CommandStation, in addition to the existing software-based overload protection. It has a single 2.1mm barrel jack DC power for both the DCC/DC output and to supply the ESP32.&lt;/p&gt;
+&lt;p&gt;EX-CSB1 also allows stacking of the original EX-MotorShield8874 with zero hardware modifications to provide four DCC and &lt;a class="reference internal" href="reference/hardware/dcc-vs-dc.html"&gt;&lt;span class="doc"&gt;DC PWM&lt;/span&gt;&lt;/a&gt; track outputs. Now users needing more power or more power districts have a strikingly simple upgrade path.&lt;/p&gt;
+&lt;p&gt;EX-CSB1’s exciting new feature is Booster mode. Using the built-in Railsync compatible DCC input jack and a small piece of EXRAIL scripting, the EX-CSB1 can switch automatically into Booster mode to produce the same DCC output on any or all of up to 4 DCC outputs. Whilst in Booster mode, the EX-CSB1 can still respond to sensor inputs and perform EXRAIL animations as a remote animation node.&lt;/p&gt;
+&lt;p&gt;EX-CSB1 sports I2C support via an industry standard STEMMA QT/Qwiic connectors and pin headers making I2C bus connections easier than ever. The STEMMA QT/Qwiic ecosystem of I2C boards from Adafruit and Sparkfun are now the easiest I2C expansion boards to use. The DCC-EX team expects to add additional STEMMA QT/Qwiic based peripherals with model railroading friendly features in upcoming releases. An I2C SIP header is included to allow many I2C enabled OLED screens to plug directly into the board.&lt;/p&gt;
+&lt;p&gt;In addition, the &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CSB1&lt;/span&gt;&lt;/a&gt; expands on the proven EXRAIL automation and animation capabilities with even more memory for larger scripts to control locos, lighting, turnouts/points, servos, and virtually everything else on the layout.&lt;/p&gt;
+&lt;p&gt;The EX-CSB1 is available immediately for purchase in the United States, the UK, Austria, Australia, New Zealand and South East Asia. Pricing starts at US$120 / AU$190 / £99 / €115 the DCC-EX store and resellers listed here:&lt;/p&gt;
+&lt;section id="suppliers-resellers-list"&gt;
+&lt;h2&gt;Suppliers / Resellers List&lt;/h2&gt;
+&lt;img alt="USA Flag" class="align-left" src="https://dcc-ex.com/_images/flag_us60px.png" style="width: 42.0px; height: 22.4px;" /&gt;
+&lt;section id="in-the-united-states-serving-usa-canada-mexico"&gt;
+&lt;h3&gt;In the United States serving USA, Canada, &amp;amp; Mexico&lt;/h3&gt;
+&lt;ul class="clearer simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://store.dcc-ex.com/"&gt;DCC-EX Store&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.smarthobbyllc.com/"&gt;Smart Hobby, LLC&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;hr class="hr-dashed" /&gt;&lt;/p&gt;
+&lt;img alt="UK Flag" class="align-left" src="https://dcc-ex.com/_images/flag_uk60px.jpg" style="width: 42.0px; height: 21.0px;" /&gt;
+&lt;/section&gt;
+&lt;section id="in-england-serving-the-uk"&gt;
+&lt;h3&gt;In England serving the UK&lt;/h3&gt;
+&lt;ul class="clearer simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://chesterfield-models.co.uk/product-category/dcc-ex/"&gt;Chesterfield Model Making and Miniature Electronics&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://acimodelrailways.co.uk/"&gt;ACI Model Railways&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;hr class="hr-dashed" /&gt;&lt;/p&gt;
+&lt;img alt="Austria Flag" class="align-left" src="https://dcc-ex.com/_images/flag_austria60px.png" style="width: 42.0px; height: 28.0px;" /&gt;
+&lt;/section&gt;
+&lt;section id="in-austria-serving-the-european-union-eu"&gt;
+&lt;h3&gt;In Austria serving the European Union (EU)&lt;/h3&gt;
+&lt;ul class="clearer simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.mrw-electronics.com/"&gt;Model Railway Electronics powered by Semify&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;hr class="hr-dashed" /&gt;&lt;/p&gt;
+&lt;img alt="Australia Flag" class="align-left" src="https://dcc-ex.com/_images/flag_australia60px.png" style="width: 42.0px; height: 25.2px;" /&gt;
+&lt;/section&gt;
+&lt;section id="in-australia-serving-au-nz-and-apac"&gt;
+&lt;h3&gt;In Australia serving AU, NZ, and APAC&lt;/h3&gt;
+&lt;ul class="clearer simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.milleng.com.au"&gt;Millennium Engineering Pty Ltd&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://bmodeltrains.com/product-category/dcc-ex-command-stations/"&gt;Buckambool Model Trains&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Initial documentation is at: &lt;a class="reference external" href="http://dcc-ex.com/ex-csb1/index"&gt;http://dcc-ex.com/ex-csb1/index&lt;/a&gt; with design files on the DCC-EX: Github &lt;a class="reference external" href="https://github.com/DCC-EX/EX-CSB1"&gt;https://github.com/DCC-EX/EX-CSB1&lt;/a&gt; &lt;img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;.&lt;/p&gt;
+&lt;p&gt;In connection with the release of the EX-CSB1, version 5.0 of the EX-CommandStation is releasing with extended support for the EX-CSB1 and the entire suite of DCC-EX products.&lt;/p&gt;
+&lt;p&gt;DCC-EX would like to extend special thanks to team members Paul Antoine and Harald Barth for their ideas and contribution to the funding and design of the &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CSB1&lt;/span&gt;&lt;/a&gt; and engineer (head designer of the EX-MotorShield8874), Erwin Peterlin of Semify in Austria providing his time and design expertise.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20241220.html" rel="alternate"/>
+    <summary>DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the second of our open source hardware products: the &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&amp;thinsp;/&amp;thinsp;Booster One Express&lt;/span&gt;&lt;/a&gt; CommandStation and Booster, providing dual 5 amp DCC and DC PWM (pulse width modulation) output.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="ex-csb1" label="ex-csb1"/>
+    <published>2024-12-20T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20240911.html</id>
+    <title>How do I display track current on the display?</title>
+    <updated>2024-09-11T00:00:00+00:00</updated>
+    <author>
+      <name>FlightRisk</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="how-do-i-display-track-current-on-the-display"&gt;
+
+&lt;p&gt;This has become a frequently asked question so we decided to create an article dedicated to the answer.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Some users want to monitor how much current their locos are using and how close they may be to the limit set for their command station as they add more locos.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The short answer is that this should be a throttle function, or a task for an external device, not a command station function. Indeed, applications like &lt;a href="../../ex-toolbox/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/a&gt; allow you to see track current virtually in real time.&lt;/p&gt;
+&lt;section id="methods-for-displaying-current"&gt;
+&lt;h2&gt;Methods For Displaying Current&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;p&gt;EX-CommandStation or to send commands to see the &lt;a class="reference internal" href="reference/software/command-summary-consolidated.html"&gt;&lt;span class="doc"&gt;current commands&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use the &lt;a href="../../ex-toolbox/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/a&gt; Android Phone/Table app with the &lt;a class="reference internal" href="ex-toolbox/using.html#current-meter"&gt;&lt;span class="std std-ref"&gt;Current Meter Function&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI’s current monitor&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use an external microcontroller with a display connected to the command station that sends commands via a serial port&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use an EXRAIL script to send the &amp;lt;JI&amp;gt; command based on a DELAY or button press and send that to a display&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+&lt;section id="why-not-to-do-this-on-the-command-station"&gt;
+&lt;h2&gt;Why Not To Do This On The Command Station&lt;/h2&gt;
+&lt;p&gt;This is much harder task than might appear:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;The current will change from microsecond to microsecond making a digital display impossible to read, you will have to perform your own averaging and conversion to a suitable display format (eg. a bar chart) but without using any floating point maths&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The cost of updating the lcd on every loop will make the command station slow to respond to commands and track shorts&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There may be up to 8 separate tracks for which current is being measured&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Future versions of the code store current in different ways.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Altering the base code is discouraged as it may be lost as updates are released, user modifications should be coded using the EXRAIL feature whenever possible.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20240911.html" rel="alternate"/>
+    <summary>This has become a frequently asked question so we decided to create an article dedicated to the answer.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <published>2024-09-11T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20240307.html</id>
+    <title>Another new EX-Installer release</title>
+    <updated>2024-03-07T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="another-new-ex-installer-release"&gt;
+
+&lt;p&gt;The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team is pleased to announce another new release of &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; (version 0.0.18). As always, we encourage all users to download this new version of the installer to take advantage of the bug fixes and new features available.&lt;/p&gt;
+&lt;p&gt;The key updates in this release are support for the new options available in &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt; version 0.7.0, and the ability to save the device logs from the Device Monitor screen directly within &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt;. This way, when interacting with the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team in Discord or via either means, when asked to provide the startup logs or serial monitor logs, you can simply open Device Monitor and click the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Save&lt;/span&gt; &lt;span class="pre"&gt;log&lt;/span&gt;&lt;/code&gt; button to obtain these.&lt;/p&gt;
+&lt;p&gt;This release also includes the below changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Update a Python module version to resolve security vulnerabilities&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add a link to &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; News articles about &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; to the Info menu&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ensure the “Backup config files” popup is always launched within the app window geometry&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix a bug where copying existing config files for &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt; and &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt; causes an exception&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20240307.html" rel="alternate"/>
+    <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team is pleased to announce another new release of &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; (version 0.0.18). As always, we encourage all users to download this new version of the installer to take advantage of the bug fixes and new features available.</summary>
+    <category term="ex-installer" label="ex-installer"/>
+    <published>2024-03-07T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20240226.html</id>
+    <title>Announcing EX-Turntable 0.7.0</title>
+    <updated>2024-02-26T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="announcing-ex-turntable-0-7-0"&gt;
+
+&lt;p&gt;The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team is pleased to share the next Beta version of &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt; with version 0.7.0 being released today. Please be aware that there are some changes in this version that may impact configuration options set, particularly for those using two wire stepper drivers such as the A4988, DRV8825, or TMC2208. Users with ULN2003 stepper drivers should not be impacted. &lt;strong&gt;NOTE&lt;/strong&gt; If you are using the STEPPER_DRIVER option &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;A4988_INV&lt;/span&gt;&lt;/code&gt; you will need to edit your configuration file, please see &lt;a class="reference internal" href="ex-turntable/configure.html#stepper-driver"&gt;&lt;span class="std std-ref"&gt;STEPPER_DRIVER&lt;/span&gt;&lt;/a&gt; and &lt;a class="reference internal" href="ex-turntable/configure.html#invert-enable"&gt;&lt;span class="std std-ref"&gt;INVERT_ENABLE&lt;/span&gt;&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;An often requested feature has been added in this release, enabling single direction rotation to cater for stepper motors and/or gearboxes that have a lot of slop. Refer to &lt;a class="reference internal" href="ex-turntable/configure.html#rotate-forward-only"&gt;&lt;span class="std std-ref"&gt;ROTATE_FORWARD_ONLY&lt;/span&gt;&lt;/a&gt; and &lt;a class="reference internal" href="ex-turntable/configure.html#rotate-reverse-only"&gt;&lt;span class="std std-ref"&gt;ROTATE_REVERSE_ONLY&lt;/span&gt;&lt;/a&gt; for more information on how to enable this.&lt;/p&gt;
+&lt;p&gt;In addition, the interactive serial console commands to &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt; have been expanded significantly, allowing for various testing, debug, display, and other options to be enabled or disabled via the serial console. Note that the test move command &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;lt;steps&lt;/span&gt; &lt;span class="pre"&gt;activity&amp;gt;&lt;/span&gt;&lt;/code&gt; has been altered also as a result. Refer to &lt;a class="reference internal" href="ex-turntable/test-and-tune.html#ex-turntable-interactive-serial-console-commands"&gt;&lt;span class="std std-ref"&gt;EX-Turntable interactive serial console commands&lt;/span&gt;&lt;/a&gt; for the complete list of commands and what they do.&lt;/p&gt;
+&lt;p&gt;Here is the summary of the changes in this release:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Fix bug where enabling sensor testing or debug output prevents compiling&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command C to initiate calibration&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command D to enable/disable debug output in serial console&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command E to erase calibration steps stored in EEPROM&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command H to initiate homing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Change movement command from &amp;lt;steps activity&amp;gt; to &amp;lt;M steps activity&amp;gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command R to reset the EX-Turntable microcontroller&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command T to enable/disable sensor testing mode&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command V to display version and other system info&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add ability to force single direction rotation only for steppers with a lot of slop&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update AccelStepper library to v1.64 and remove need for modification&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enable inversion of direction, steps, and enable via config.h defines&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20240226.html" rel="alternate"/>
+    <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team is pleased to share the next Beta version of &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt; with version 0.7.0 being released today. Please be aware that there are some changes in this version that may impact configuration options set, particularly for those using two wire stepper drivers such as the A4988, DRV8825, or TMC2208. Users with ULN2003 stepper drivers should not be impacted. NOTE If you are using the STEPPER_DRIVER option A4988_INV you will need to edit your configuration file, please see ex-turntable/configure:stepper_driver and ex-turntable/configure:invert_enable for more information.</summary>
+    <category term="ex-turntable" label="ex-turntable"/>
+    <category term="release" label="release"/>
+    <published>2024-02-26T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20240215.html</id>
+    <title>Announcing EX-SensorCAM - a new camera-based sensor for your layout</title>
+    <updated>2024-02-15T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="announcing-ex-sensorcam-a-new-camera-based-sensor-for-your-layout"&gt;
+
+&lt;p&gt;Are you struggling to figure out how to neatly run a myriad of cables around your layout to cater for dozens (or more) of sensors? Struggling to find ways to neatly integrate and hide sensors in and around your track? Well struggle no more, EX-SensorCAM is here!&lt;/p&gt;
+&lt;p&gt;Today, we are announcing a new Alpha product using embedded camera technology with the ESP32 CAM platform to visually monitor your layout and detect movements of trains to trigger events.&lt;/p&gt;
+&lt;p&gt;This can be used in place of traditional wired layout sensors with a camera placed overhead instead. This can then monitor activities on the layout, rather than having to figure out the best location for a sensor, then figure out how to mount or embed it in the track bed or surrounds, and then figure out a cunning way to hide it so it looks like part of the scenery. Not to mention removing the need to wire up every sensor and ensure that wiring is neat and tidy underneath the layout.&lt;/p&gt;
+&lt;p&gt;Like all our Alpha releases, this is very new software, meaning it’s going to rapidly undergo many changes and bug fixes as issues are found, and functionality is likely going to change over time. This also means the project is currently aimed more towards our &lt;a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../../begin/levels.html#tinkerer"&gt;Tinkerer&lt;/a&gt; and &lt;a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../../begin/levels.html#engineer"&gt;Engineer&lt;/a&gt; audiences.&lt;/p&gt;
+&lt;p&gt;There are some caveats on things like lighting requirements at the moment given the ESP32 CAM platform is a fairly low performance, entry-level device.&lt;/p&gt;
+&lt;p&gt;If you’re keen to have a look and get started, then you can find the software in our &lt;a class="reference external" href="https://github.com/DCC-EX/EX-SensorCAM"&gt;EX-SensorCAM repository&lt;/a&gt; in GitHub, where you will find a PDF with instructions on what’s required to get started.&lt;/p&gt;
+&lt;p&gt;You can also discuss this in the #ex-sensorcam channel in our &lt;a class="reference external" href="https://discord.gg/y2sB4Fp"&gt;Discord Server&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20240215.html" rel="alternate"/>
+    <summary>Are you struggling to figure out how to neatly run a myriad of cables around your layout to cater for dozens (or more) of sensors? Struggling to find ways to neatly integrate and hide sensors in and around your track? Well struggle no more, EX-SensorCAM is here!</summary>
+    <category term="ex-sensorcam" label="ex-sensorcam"/>
+    <published>2024-02-15T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20240214.html</id>
+    <title>Belated Happy New Year and a new EX-Installer!</title>
+    <updated>2024-02-14T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="belated-happy-new-year-and-a-new-ex-installer"&gt;
+
+&lt;p&gt;Firstly, we wish all our users a rather belated Happy New Year as we present our first DCC-EX News article for 2024! The news today is we have released an updated version of our &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; (version 0.0.17).&lt;/p&gt;
+&lt;p&gt;This release includes the below changes, and as always we encourage you to download this latest version of &lt;a class="reference internal" href="download/ex-commandstation.html#ex-installer"&gt;&lt;span class="std std-ref"&gt;EX-Installer&lt;/span&gt;&lt;/a&gt; from our downloads page:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Improved how we handle fonts across different Operating Systems&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update various Python module versions to resolve security vulnerabilities&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Remove the option to select Arduino Nano with the old bootloader, as this has never worked&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Prevent enabling WiFi for &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; on the Arduino Uno/Nano platforms as they don’t have enough memory&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Set the default CV programming option in &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; to enabled for the Arduino Uno/Nano platforms&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Change the &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; start with power on option to use &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;POWERON&lt;/span&gt;&lt;/code&gt; instead of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;JOIN&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add the ability to override local changes made to &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;, &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt;, and &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt; software instead of just generating an error&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Allow a blank WiFi password in STA mode&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20240214.html" rel="alternate"/>
+    <summary>Firstly, we wish all our users a rather belated Happy New Year as we present our first DCC-EX News article for 2024! The news today is we have released an updated version of our &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; (version 0.0.17).</summary>
+    <category term="ex-installer" label="ex-installer"/>
+    <published>2024-02-14T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20231207.html</id>
+    <title>Announcing the new DCCEXProtocol Arduino Library!</title>
+    <updated>2023-12-07T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="announcing-the-new-dccexprotocol-arduino-library"&gt;
+
+&lt;p&gt;The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are proud to announce that we’ve released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; using our native command API.&lt;/p&gt;
+&lt;p&gt;Why release an Arduino library in the first place?&lt;/p&gt;
+&lt;p&gt;We figure for those who want to write throttle software and interact with the &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; are probably more interested in making their software work rather than figuring out how to correctly parse our native API commands and respond appropriately to the various command responses and broadcasts that are generated and need to be dealt with.&lt;/p&gt;
+&lt;p&gt;So, in light of this, a library that takes away the heavy lifting of using/interpreting the API commands seemed like a sensible approach.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;One great big caveat&lt;/strong&gt; to this announcement is that the library version is 0.0.1, meaning it has had limited testing and is likely going to have bugs associated with it.&lt;/p&gt;
+&lt;p&gt;For documentation on how to implement and use the library, refer to the &lt;a class="reference external" href="https://dcc-ex.com/DCCEXProtocol/index.html"&gt;DCCEXProtocol documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20231207.html" rel="alternate"/>
+    <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are proud to announce that we’ve released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; using our native command API.</summary>
+    <category term="dcc-ex" label="dcc-ex"/>
+    <category term="dccexprotocol" label="dccexprotocol"/>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="news" label="news"/>
+    <published>2023-12-07T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230917.html</id>
+    <title>EX-Installer Updated</title>
+    <updated>2023-09-17T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="ex-installer-updated"&gt;
+
+&lt;p&gt;Since our original announcement back on the 2nd of July 2023, &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; has continued to be improved with both enhancements and bug fixes. Originally announced at version 0.0.12, this new announcement has &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; at version 0.0.16, with quite a difference between these two releases!&lt;/p&gt;
+&lt;section id="new-features"&gt;
+&lt;h2&gt;New features:&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Added an information menu with version and device information and links to our website and instructions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added support to install &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt; and &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added command history to the Device Monitor&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added popup help for contextual help when hovering your mouse over various options&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Various enhancements to contextual highlighting in Device Monitor&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Various enhancements to configuring &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; including a refreshed configuration interface and support for newer features&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added a tools menu in order to set screen scaling for smaller or larger screen sizes, and to help those of us who don’t see as well as we used to&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added some device specific limitations and recommendations, such as disabling Track Manager on Uno/Nano&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="bug-fixes"&gt;
+&lt;h2&gt;Bug fixes:&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where Track Manager options were displayed for incorrect versions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where Device Monitor was forced on top of all windows in Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where closing the app with Device Monitor open could leave the Arduino CLI running in the background&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where Track Manager and current override options were disabled for &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; 5.0.0 or later&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue in Device Monitor where the output was blank and/or flashing on older Linux versions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue for incorrect screen scaling on Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where the Ethernet library was not installed when enabling Ethernet support for &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; (you must click “Refresh Arduino CLI” to have this installed)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue on Fedora Linux where SSL certificates were not available (a warning will still be seen for fonts which can be disregarded)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is by no means an exhaustive list of the updates, so we highly recommmend downloading this latest version of &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230917.html" rel="alternate"/>
+    <summary>Since our original announcement back on the 2nd of July 2023, &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; has continued to be improved with both enhancements and bug fixes. Originally announced at version 0.0.12, this new announcement has &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; at version 0.0.16, with quite a difference between these two releases!</summary>
+    <category term="ex-installer" label="ex-installer"/>
+    <published>2023-09-17T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230911.html</id>
+    <title>Farewell to the old exInstaller, in with the new EX-Installer!</title>
+    <updated>2023-09-11T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="farewell-to-the-old-exinstaller-in-with-the-new-ex-installer"&gt;
+
+&lt;p&gt;Today, we bid a fond farewell to the old exInstaller, used successfully by many a user to load our flagship product &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; onto Arduino devices around the world and enable DCC control of many model railroading layouts.&lt;/p&gt;
+&lt;p&gt;As announced earlier this year, our new &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; has been released to supersede our original installer, and over time will allow loading all our Arduino based products rather than just focusing on &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you still use the original exInstaller, we encourage you to move to &lt;a class="reference internal" href="ex-installer/index.html"&gt;&lt;span class="doc"&gt;EX-Installer&lt;/span&gt;&lt;/a&gt; instead.&lt;/p&gt;
+&lt;p&gt;The old exInstaller has now been made a public archive, and no further development will occur.&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230911.html" rel="alternate"/>
+    <summary>Today, we bid a fond farewell to the old exInstaller, used successfully by many a user to load our flagship product &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; onto Arduino devices around the world and enable DCC control of many model railroading layouts.</summary>
+    <category term="ex-installer" label="ex-installer"/>
+    <published>2023-09-11T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230807.html</id>
+    <title>Version 5 is here!</title>
+    <updated>2023-08-07T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="version-5-is-here"&gt;
+
+&lt;p&gt;&lt;span class="new-in-v5"&gt;New in version 5 &lt;/span&gt; Yep, that’s right, the much anticipated &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; version 5 release is here at last! This is a huge release, adding significant new features like &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt;, enhancing existing capabilities, introducing new and enhanced I/O support, along with other associated products such as &lt;a href="../../ex-fastclock/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/a&gt;, &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt;, and &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We highly recommend upgrading to version 5 to take advantage of the improvements we’ve made, and especially for those users who are using our new &lt;a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;MotorShield8874&lt;/span&gt;&lt;/a&gt;, as we’ve improved how it deals with overloads and inrush current amongst other enhancements.&lt;/p&gt;
+&lt;p&gt;To get your hands on this latest release, select &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Latest&lt;/span&gt; &lt;span class="pre"&gt;Production&lt;/span&gt;&lt;/code&gt; when running &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; (see &lt;a class="reference internal" href="ex-installer/installing.html"&gt;&lt;span class="doc"&gt;Using EX-Installer - Detailed Instructions&lt;/span&gt;&lt;/a&gt;), or you can download it manually by following the directions in &lt;a class="reference internal" href="download/ex-commandstation.html#latest-ex-commandstation-official-release"&gt;&lt;span class="std std-ref"&gt;Latest EX-CommandStation Official Release&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We’ve outlined the key updates below but this is not an exhaustive list.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="../../news/posts/20230807.html"&gt;&lt;img alt="New in Version 5" class="image-min-width-144" src="https://dcc-ex.com/_images/new_in_version_5.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;section id="ex-commandstation-features-fixes-and-enhancements"&gt;
+&lt;h2&gt;EX-CommandStation features, fixes, and enhancements&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt; - Run both DC and DCC trains from the same controller and switch your tracks between DC and DCC modes live, see &lt;a class="reference internal" href="trackmanager/index.html"&gt;&lt;span class="doc"&gt;TrackManager (DCC &amp;amp; DC)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Beta support for new, 32 bit microcontrollers including ESP32 WROOM and some STMicroelectronics Nucleo, see &lt;a class="reference internal" href="reference/hardware/microcontrollers/microcontrollers.html"&gt;&lt;span class="doc"&gt;Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Extensive optimisation of HIGHMEM useage to free up PROGMEM below the 64kb and increase the useful life of the AVR Mega2560 platform&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add option to disable programming to allow limited platforms such as the Arduino Uno to run limited &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; scripts&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add support for our new fast clock &lt;a href="../../ex-fastclock/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/a&gt;, see &lt;a class="reference internal" href="ex-fastclock/index.html"&gt;&lt;span class="doc"&gt;EX-FastClock&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add support for our new I/O expander &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt;, see &lt;a class="reference internal" href="ex-ioexpander/index.html"&gt;&lt;span class="doc"&gt;EX-IOExpander&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add support for our new turntable controller &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt;, see &lt;a class="reference internal" href="ex-turntable/index.html"&gt;&lt;span class="doc"&gt;EX-Turntable&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add support for duinoNodes, see &lt;a class="reference internal" href="ex-commandstation/accessories/inputs-outputs/duinonodes.html"&gt;&lt;span class="doc"&gt;Lew’s Duino Gear duinoNodes&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add support for a rotary encoder&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add support for PCF8575 and PCA/TCA9555 GPIO devices&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enhanced overcurrent detection, including enhancing the behaviour to deal with inrush current issues&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Moved startup of the HAL earlier in the boot sequence&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improved performance for ADC (analogue to digital) reads&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enhancements to I&lt;sup&gt;2&lt;/sup&gt;C bus retries and timeouts&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Support for I&lt;sup&gt;2&lt;/sup&gt;C multiplexers to help with devices with static or limited address ranges&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Support for multiple I&lt;sup&gt;2&lt;/sup&gt;C displays&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improved handling of conflicting I&lt;sup&gt;2&lt;/sup&gt;C addresses and Vpin allocations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enhanced DFPlayer error handling&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;lt;JG&amp;gt;&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;lt;JI&amp;gt;&lt;/span&gt;&lt;/code&gt; for multi-track gauges to support &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improved stability for the VL53L0X ToF sensor&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bugfix for signals being inverted (active high was actually active low and vice versa)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bugfix for Ethernet allowing a static IP address to be set&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="known-issues"&gt;
+&lt;h2&gt;Known Issues&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;We have one known issue in version 5 where DFPlayer doesn’t work correctly in some circumstances, which we are investigating and will fix soon&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="exrail-enhancements"&gt;
+&lt;h2&gt;EXRAIL enhancements&lt;/h2&gt;
+&lt;p&gt;For details on these changes and new commands, refer to our new, consolidated &lt;a class="reference internal" href="exrail/exrail-command-reference.html"&gt;&lt;span class="doc"&gt;EXRAIL Command Reference&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;BREAKING CHANGE&lt;/strong&gt; Removed implicit &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;AUTOSTART&lt;/span&gt;&lt;/code&gt; from myAutomation.h, simply add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;AUTOSTART&lt;/span&gt;&lt;/code&gt; to the beginning of the file to restore this, see &lt;a class="reference internal" href="exrail/exrail-command-reference.html#scripts-sequences-types-and-control"&gt;&lt;span class="std std-ref"&gt;Scripts/Sequences - Types and Control&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enhance &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SPEED&lt;/span&gt;&lt;/code&gt; command to respond to external direction changes&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;DCC_SIGNAL&lt;/span&gt;&lt;/code&gt; command to control DCC Accessory based signals&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;VIRTUAL_SIGNAL&lt;/span&gt;&lt;/code&gt; command to enable user-defined signal sequences&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ONGREEN&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ONAMBER&lt;/span&gt;&lt;/code&gt;, and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ONRED&lt;/span&gt;&lt;/code&gt; signal event handlers to respond to signal changes&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;TURNOUTL&lt;/span&gt;&lt;/code&gt; command to enable using a linear DCC address for DCC Accessory turnouts&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;MOVETT&lt;/span&gt;&lt;/code&gt; command to enable controlling an &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;IFRE&lt;/span&gt;&lt;/code&gt; command to test the position of a rotary encoder&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ONCHANGE&lt;/span&gt;&lt;/code&gt; event handler to respond to a position change of a rotary encoder&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ONCLOCKTIME&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ONCLOCKMINS&lt;/span&gt;&lt;/code&gt; event handlers to respond to &lt;a href="../../ex-fastclock/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/a&gt; times&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;IFLOCO&lt;/span&gt;&lt;/code&gt; command to test if the provided loco ID is used in the sequence&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;FORGET&lt;/span&gt;&lt;/code&gt; command to drop the provided loco ID from reminder tables&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SET_TRACK&lt;/span&gt;&lt;/code&gt; command to configure &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt; in sequences&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SERIAL4&lt;/span&gt;&lt;/code&gt;, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SERIAL5&lt;/span&gt;&lt;/code&gt;, and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SERIAL6&lt;/span&gt;&lt;/code&gt; to support newer microcontrollers with more/different interfaces&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SCREEN&lt;/span&gt;&lt;/code&gt; command to display messages on multiple displays&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;POWERON&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;POWEROFF&lt;/span&gt;&lt;/code&gt; commands to control track power&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="website-enhancements"&gt;
+&lt;h2&gt;Website enhancements&lt;/h2&gt;
+&lt;p&gt;As always, we are continuing to ensure our website is updated, and endeavour to make it easier to use and find information.&lt;/p&gt;
+&lt;img alt="Dark mode icon" class="align-right" src="https://dcc-ex.com/_images/dark_mode.png" /&gt;
+&lt;p&gt;The big change is that you can now choose “dark mode” by clicking the icon in bottom right corner.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230807.html" rel="alternate"/>
+    <summary>&lt;span class="new-in-v5"&gt;New in version 5 &lt;/span&gt; Yep, that’s right, the much anticipated &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; version 5 release is here at last! This is a huge release, adding significant new features like &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt;, enhancing existing capabilities, introducing new and enhanced I/O support, along with other associated products such as &lt;a href="../../ex-fastclock/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/a&gt;, &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt;, and &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt;.</summary>
+    <category term="new-in-version-5" label="new-in-version-5"/>
+    <category term="news" label="news"/>
+    <category term="version-5" label="version-5"/>
+    <published>2023-08-07T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230728.html</id>
+    <title>No support planned for the Uno R4 or Giga</title>
+    <updated>2023-07-28T00:00:00+00:00</updated>
+    <author>
+      <name>Fred (FrightRisk)</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="no-support-planned-for-the-uno-r4-or-giga"&gt;
+
+&lt;p&gt;&lt;strong&gt;DCC-EX&lt;/strong&gt; has no plans to support the &lt;em&gt;Uno R4&lt;/em&gt; or &lt;em&gt;Giga&lt;/em&gt; at this time. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.&lt;/p&gt;
+&lt;p&gt;Firstly it is worth noting that while the DCC-EX team is not working on it, you are free to work with the team on a port and we will provide you with support and help if you feel up to the task.&lt;/p&gt;
+&lt;p&gt;Like you, we get excited when a new product is announced and can’t wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the &lt;strong&gt;Uno R4&lt;/strong&gt; and &lt;strong&gt;Giga&lt;/strong&gt; are advancements to the Arduino platform, and are great products,&lt;/p&gt;
+&lt;p&gt;It is unfortunate (for us) that Arduino chose to carry on the “Uno” name with the Uno R4 board. The “R4” designator would create the impression that this is just “rev 4” of the old Uno Rev3. We all know from experience with versions of things that 4 comes after 3 and so this is just a faster, better Uno, right? Not quite. At least the new Giga was not called the Mega R4, though at $73 US, it is cost prohibitive for a command station.&lt;/p&gt;
+&lt;p&gt;The Uno R4 is about as similar to the old Uno as a PC is to a Mac. It is the same size and has the same orientation of GPIO for attaching shields, but uses a completely different microcontroller (2 actually), from completely different manufacturers, using completely different architectures.&lt;/p&gt;
+&lt;p&gt;It is one thing to run a blink sketch on these new boards, but a completely different task trying to port software as involved at the hardware level as the EX-CommandStation. The R4 uses a different core library with limited support since many libraries still have to be rewritten. So it will take some time for support to build.&lt;/p&gt;
+&lt;p&gt;With design limitations of the R4, only a modest increase in memory and speed, and higher cost ($28 US), it isn’t the best option when we already support the faster, less expensive ESPDuino32 (only $5-$10). We are also currently in beta test with the ST Micro Nucleo boards, including one with 144 GPIO pins and an Ethernet connection. These cost just $12 to $24 depending on the board and have an integrated debugger with a separate processor right on the board!&lt;/p&gt;
+&lt;p&gt;All that said, we would still enjoy being able to run on Arduino boards whenever possible. As mentioned above, we are open to working with anyone with the time and talent who thinks they can port our software to these new boards. We can provide direction, code snippets, code reviews, and access to the team. In the meantime, we encourage everyone to take a look at our list of &lt;a class="reference external" href="https://dcc-ex.com/ex-commandstation/advanced-setup/supported-microcontrollers/index.html#supported-microcontrollers"&gt;Supported Microcontrollers&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230728.html" rel="alternate"/>
+    <summary>DCC-EX has no plans to support the Uno R4 or Giga at this time. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.</summary>
+    <category term="dcc-ex" label="dcc-ex"/>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="giga" label="giga"/>
+    <category term="news" label="news"/>
+    <category term="uno" label="uno"/>
+    <published>2023-07-28T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230702.html</id>
+    <title>DCC-EX has a new installer!</title>
+    <updated>2023-07-02T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="dcc-ex-has-a-new-installer"&gt;
+
+&lt;p&gt;Yes, that’s right, the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team is announcing we have an updated &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;The previous version has been a welcome addition to the family and served many users well, however only caters for &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;, and has recently had issues for our Linux and macOS users, meaning it was time for a refresh.&lt;/p&gt;
+&lt;p&gt;Our new installer has been written in Python with a view to being portable across as many operating systems as possible and continues to use the Arduino Command Line Interface (CLI) in the background to manage loading the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; software onto your Arduino device.&lt;/p&gt;
+&lt;p&gt;Further to this, the new &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; has been written in a way that will allow you to install our other Arduino based products with it in the future, including &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt;, &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt;, &lt;a href="../../ex-fastclock/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/a&gt;, and &lt;a href="../../ex-dccinspector/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;DCCInspector&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You just need to download one file for either Windows, Linux, or macOS in order to get up and running with the new &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt;, and it will take care of downloading our software and managing your Arduino device. &lt;a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"&gt;&lt;span class="fn-bracket"&gt;[&lt;/span&gt;1&lt;span class="fn-bracket"&gt;]&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For instructions on how to get the new &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; and how to use it, head over to the &lt;a class="reference internal" href="ex-installer/index.html"&gt;&lt;span class="doc"&gt;EX-Installer&lt;/span&gt;&lt;/a&gt; page.&lt;/p&gt;
+&lt;img alt="New version" src="https://dcc-ex.com/_images/new-version.png" style="width: 401.0px; height: 319.5px;" /&gt;
+&lt;aside class="footnote-list brackets"&gt;
+&lt;aside class="footnote brackets" id="id2" role="note"&gt;
+&lt;span class="label"&gt;&lt;span class="fn-bracket"&gt;[&lt;/span&gt;&lt;a role="doc-backlink" href="#id1"&gt;1&lt;/a&gt;&lt;span class="fn-bracket"&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;p&gt;For Windows users with generic or clone Arduino devices, you will still need to install suitable USB to serial drivers (e.g. CH340/341) as the Arduino CLI only provides drivers for genuine Arduino devices.&lt;/p&gt;
+&lt;/aside&gt;
+&lt;/aside&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230702.html" rel="alternate"/>
+    <summary>Yes, that’s right, the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team is announcing we have an updated &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt;!</summary>
+    <category term="ex-installer" label="ex-installer"/>
+    <category term="news" label="news"/>
+    <published>2023-07-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230515.html</id>
+    <title>DCC-EX Releases 5amp EX-MotorShield8874</title>
+    <updated>2023-05-15T00:00:00+00:00</updated>
+    <author>
+      <name>Paul Antoine</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="dcc-ex-releases-5amp-ex-motorshield8874"&gt;
+
+&lt;p&gt;&lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt;, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the &lt;a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;MotorShield8874&lt;/span&gt;&lt;/a&gt;, providing dual 5 amp &lt;a class="reference internal" href="reference/hardware/dcc-vs-dc.html"&gt;&lt;span class="doc"&gt;DCC&lt;/span&gt;&lt;/a&gt; and &lt;a class="reference internal" href="reference/hardware/dcc-vs-dc.html"&gt;&lt;span class="doc"&gt;DC PWM&lt;/span&gt;&lt;/a&gt; (pulse width modulation) output for &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;MotorShield8874&lt;/span&gt;&lt;/a&gt; addresses the needs of &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; users wanting to run multiple locos, across multiple power districts without requiring expensive DCC boosters. A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;MotorShield8874&lt;/span&gt;&lt;/a&gt; is the first offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire. DCC-EX hardware lead Paul Antoine says “the open source vision for hardware designs from the DCC-EX community means individual users can order small batch manufacturing of all DCC-EX endorsed designs for themselves, friends and fellow club members. Or they have the choice to buy the same quality of product from licensed local resellers in their countries of origin.”&lt;/p&gt;
+&lt;img alt="DCC-EX EX-MotorShield8874 RevA Semify" src="https://dcc-ex.com/_images/ex_motorshield8874.jpeg" style="width: 750.0px; height: 500.0px;" /&gt;
+&lt;p&gt;Featuring dual 5A output Texas Instruments DRV8874 MOSFET H-Bridge ICs, the EX-MotorShield8874 shield is fully drop-in compatible with the industry standard Arduino Motor Shield R3 due to additional logic onboard, along with plenty of new features. As a result, it can immediately replace older L298 based boards without software modifications. There is no need to have to cut traces or bend out pins, and the EX-MotorShield8874 can power your EX-CommmandStation too! The DRV8874 H-Bridge ICs also include hardware overcurrent protection monitored by EX-CommandStation, in addition to the existing software-based overload protection.&lt;/p&gt;
+&lt;p&gt;DCC-EX specific features include single 2.1mm barrel jack DC power for both the DCC/DC output and to supply the underlying Command Station motherboard with inbuilt polarity protection. This eliminates the need for a separate power supply for the Command Station motherboard. An onboard switching power supply regulates the DCC track input voltage to a safe 7.2VDC to the motherboard via the VIN pin, ensuring its linear 5V and 3.3V regulators stay as cool as possible.&lt;/p&gt;
+&lt;p&gt;EX-MotorShield8874 is also future-proof, being compatible with current Arduino UNO and Mega based DCC-EX command station motherboards, and the more powerful platforms under development which use 3.3V microcontrollers, such as STM32 Nucleo and ESP32 based designs.&lt;/p&gt;
+&lt;p&gt;EX-MotorShield8874 sports I2C support via an industry standard STEMMA QT/Qwiic connectors and pin headers making I2C bus connections easier than ever. The STEMMA QT/Qwiic ecosystem of I2C boards from Adafruit and Sparkfun are now the easiest I2C expansion boards to use. The DCC-EX team expects to add additional STEMMA QT/Qwiic based peripherals with model railroading friendly features in upcoming releases. An I2C SIP header is included to allow many I2C enabled OLED screens to plug directly into the board.&lt;/p&gt;
+&lt;p&gt;The design of the EX-MotorShield8874 was Inspired by a discussion on the Austrian 1zu160 N scale model railway forum between DCC-EX development team member Harald Barth and enthusiastic DCC-EX user Erwin Peterlin. Erwin then designed the prototype EX-MotorShield8874 in a matter of days. Erwin is a skilled Digital Design and Verification Engineer by day for his employer, Semify (semify-eda.com) of Austria, who kindly offered to fund the prototype boards. Semify has also arranged to sell their initial production test batch on Tindie.&lt;/p&gt;
+&lt;p&gt;Erwin worked closely with the DCC-EX team on specification of additional features to suit DCC-EX software, with early prototypes being provided to the DCC-EX team for testing and verification. We are proud to say that Erwin opted to become part of the DCC-EX team and will continue to work on future projects.&lt;/p&gt;
+&lt;p&gt;Erwin and Semify have graciously provided the design files for the EX-MotorShield8874 on an open source basis, allowing DCC-EX users to order small batches of up to 10 assembled units from manufacturers such as JLCPCB.&lt;/p&gt;
+&lt;p&gt;Entrepreneurs wanting to offer commercial quantities to their local communities should contact Semify (service &amp;#64; semify-eda.com) to arrange a bulk purchase, or DCC-EX (support &amp;#64; dcc-ex.com) when looking to use the design to manufacture. Licensing includes donating a royalty to DCC-EX per board sold. Semify has a separate arrangement with DCC-EX due to their funding of the prototyping and work on verifying and testing the design.&lt;/p&gt;
+&lt;p&gt;EX-MotorShield8874 is available immediately for purchase in the EU, USA and Canada via Semify’s Tindie store (&lt;a class="reference external" href="https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/"&gt;https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/&lt;/a&gt;) starting at $US34.90 each, and in Australia, New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders &amp;#64; milleng.com.au) for $AU55, plus shipping. It will also be available shortly in the UK through Chesterfield Model Making &amp;amp; Miniature Electronics (&lt;a class="reference external" href="https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/"&gt;https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/&lt;/a&gt;), for £29.99 plus shipping. Expect further announcements re local availability in the US through DCC-EX directly and Smart Hobby LLC, with other countries to follow.&lt;/p&gt;
+&lt;p&gt;Design files and initial hardware documentation are at: &lt;a class="reference external" href="https://github.com/DCC-EX/EX-Motorshield8874"&gt;https://github.com/DCC-EX/EX-Motorshield8874&lt;/a&gt; and installation details at: &lt;a class="reference external" href="https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html"&gt;https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;DCC-EX Website will have further documentation for the EX-MotorShield8874, and extended support in software will be included in the upcoming EX-CommandStation v5.0 release scheduled for late May 2023.&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230515.html" rel="alternate"/>
+    <summary>&lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt;, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the &lt;a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;MotorShield8874&lt;/span&gt;&lt;/a&gt;, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;.</summary>
+    <category term="ex-commandstationex-motorshield8874" label="ex-commandstation ex-motorshield8874"/>
+    <published>2023-05-15T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230409.html</id>
+    <title>Final Version 4 Release (v4.1.5)</title>
+    <updated>2023-04-09T00:00:00+00:00</updated>
+    <author>
+      <name>Fred (FrightRisk)</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="final-version-4-release-v4-1-5"&gt;
+
+&lt;p&gt;We’re excited to announce the final version 4 release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; before we move to version 5!&lt;/p&gt;
+&lt;p&gt;This is just a minor bugfix release from the previous version 4.1.2. This release is a Bugfix release to fix the initialisation order to benefit Ethernet boards, to fix GitHub issue &lt;a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/issues/299"&gt;#299&lt;/a&gt; related to TurnoutDescription, and to fix command parsing for LCN (the Layout Control Nodes Accessory Network).&lt;/p&gt;
+&lt;p&gt;To get the latest version, see the &lt;a class="reference internal" href="download/ex-commandstation.html#latest-ex-commandstation-official-release"&gt;&lt;span class="std std-ref"&gt;Latest EX-CommandStation Official Release&lt;/span&gt;&lt;/a&gt; section.&lt;/p&gt;
+&lt;p&gt;There is also an updated &lt;a class="reference internal" href="reference/downloads/documents.html#comprehensive-dcc-ex-jmri-decoderpro-getting-started-guide-pdf"&gt;&lt;span class="std std-ref"&gt;Comprehensive DCC-EX &amp;amp; JMRI DecoderPro Getting Started Guide PDF&lt;/span&gt;&lt;/a&gt; available for download to help you get up and running with &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; DecoderPro and &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Look for some major new features soon in version 5.0!&lt;/strong&gt;&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230409.html" rel="alternate"/>
+    <summary>We’re excited to announce the final version 4 release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; before we move to version 5!</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="production" label="production"/>
+    <category term="release" label="release"/>
+    <published>2023-04-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230327.html</id>
+    <title>Version 5 progress and a breaking change in the development branch</title>
+    <updated>2023-03-27T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="version-5-progress-and-a-breaking-change-in-the-development-branch"&gt;
+
+&lt;p&gt;We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go.&lt;/p&gt;
+&lt;p&gt;Amongst other things, this has resulted in one potentially “breaking” change for users of &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt;’s capability to run sequences/routes on start-up.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Breaking change:&lt;/strong&gt; The implicit AUTOSTART at the beginning of the “myAutomation.h” file for &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; has been disabled, as we have found it confuses a great many first time users.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;What does this mean?&lt;/p&gt;
+&lt;p&gt;Previously, when your &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; started up with a “myAutomation.h” file present, anything defined prior to the very first &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;DONE&lt;/span&gt;&lt;/code&gt; statement would execute automatically. This was used to do things like set turnouts/points to a known startup position, automatically start routes or sequences for fully automated layouts, and so forth.&lt;/p&gt;
+&lt;p&gt;As of v4.2.31, this behaviour is disabled, meaning nothing defined in “myAutomation.h” will automatically start unless preceded by the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;AUTOSTART&lt;/span&gt;&lt;/code&gt; directive (see &lt;a class="reference internal" href="exrail/exrail-command-reference.html#scripts-sequences-types-and-control"&gt;&lt;span class="std std-ref"&gt;Scripts/Sequences - Types and Control&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;At the time of writing, we are currently at v4.2.37 of the &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; development release, and these updates are continuing multiple times a week as we find/fix bugs and refine the software.&lt;/p&gt;
+&lt;p&gt;Here are some more highlights of what’s been done since the last news update:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;New &amp;lt;JG&amp;gt; and &amp;lt;JI&amp;gt; commands for multi-track gauges such as current sensing (v4.2.20)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Static IP address now configurable for Ethernet shields (v4.2.24)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SAMD21 had a bug in EXRAIL due to memory alignment, this likely improves 32-bit support for various microcontrollers (v4.2.25)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improved stability/reliability of the &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt; device driver (v4.2.26) and bug fix for analogue inputs (v4.2.34)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Updated the DFPlayer code to cope with a new variant of the popular sound board seen in the wild, and mods to the HCRS04 ultrasonic driver so it uses less CPU loop time (v4.2.28)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Various LCD bug fixes (latest in v4.2.29)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;lt;z&amp;gt;&lt;/span&gt;&lt;/code&gt; direct I/O pin manipulation command (v4.2.35)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add new “FLAGS” device to the HAL to communicate Vpin changes outside of &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; to software such as &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; (v4.2.37)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some of the above new features and fixes are currently undocumented which we will fix in the coming weeks. In the meantime, feel free to jump onto Discord and chat with the developers and keep up to date (&lt;a class="reference internal" href="support/contact-us.html"&gt;&lt;span class="doc"&gt;Contact Us&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230327.html" rel="alternate"/>
+    <summary>We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="ex-ioexpander" label="ex-ioexpander"/>
+    <category term="exrail" label="exrail"/>
+    <published>2023-03-27T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230309.html</id>
+    <title>Extra, extra, read all about it! Introducing DCC-EX News!</title>
+    <updated>2023-03-09T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="extra-extra-read-all-about-it-introducing-dcc-ex-news"&gt;
+
+&lt;p&gt;Yep, that’s right, the DCC-EX team are now publishing updates regularly with our new “DCC-EX News” feed!&lt;/p&gt;
+&lt;p&gt;We’ve come to realise we can do much better in communicating the various different projects the team is working on, when we are releasing new versions, when we’ve found/fixed bugs, and when we have news or announcements to share with all our users.&lt;/p&gt;
+&lt;p&gt;So, without further adieu, we are sharing this very first post, and these will continue regularly as we have news to share.&lt;/p&gt;
+&lt;p&gt;Here’s what’s happening at the moment:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;We’re continuing to work towards our next major release which will be v5.0.0, and will include some great new features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Track Manager (formerly called DC Districts), allowing you to run more than two motor driver outputs in DCC, DC, or programming track modes&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Support for newer generation, 32bit microcontrollers from STMicroelectronics&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improvements to I&lt;sup&gt;2&lt;/sup&gt;C connectivity including better timeout handling, the ability to reset the bus without rebooting the &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;, and support for multiplexors&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Included device drivers for &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt;, &lt;a href="../../ex-fastclock/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/a&gt;, and &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We’re continuing to review and improve our website and ways to keep you informed (hence this news feed)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We’re working on new, open source hardware options to make the entry point to DCC-EX simpler for those who aren’t up to the level of DIY currently required&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you wish to follow “DCC-EX News”, we will have the latest few posts published on the front page of our website, along with the &lt;a class="reference external" href="https://dcc-ex.com/news.html"&gt;complete list here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you use an RSS/Atom feed reader, you can add “DCC-EX News” by the URL “&lt;a class="reference external" href="https://dcc-ex.com/news/atom.xml"&gt;https://dcc-ex.com/news/atom.xml&lt;/a&gt;”.&lt;/p&gt;
+&lt;p&gt;We look forward to sharing more news and information with you all!&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230309.html" rel="alternate"/>
+    <summary>Yep, that’s right, the DCC-EX team are now publishing updates regularly with our new “DCC-EX News” feed!</summary>
+    <category term="dcc-ex" label="dcc-ex"/>
+    <category term="news" label="news"/>
+    <published>2023-03-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230309a.html</id>
+    <title>EX-Toolbox released on the Play Store</title>
+    <updated>2023-03-09T00:00:00+00:00</updated>
+    <author>
+      <name>flash62au (Peter)</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="ex-toolbox-released-on-the-play-store"&gt;
+
+&lt;p&gt;&lt;a href="../../ex-toolbox/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/a&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.&lt;/p&gt;
+&lt;p&gt;&lt;a href="../../ex-toolbox/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/a&gt; can be installed on you phone or table via the &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox"&gt;Google Play Store&lt;/a&gt; . (Or search in the Play Store for “EX-Toolbox”, including the quotes.)&lt;/p&gt;
+&lt;p&gt;With &lt;a href="../../ex-toolbox/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/a&gt; you can perform:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;CV Programming in the programming track (Service Mode)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CV Programming in the main track (Operation Mode)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Servo motor testing and adjustment&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sensor testing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Current Meter (Only available when connected to EX-CommandStation version 5.0.0 and above.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Track Manager (Only available when connected to EX-CommandStation version 5.0.0 and above.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230309a.html" rel="alternate"/>
+    <summary>&lt;a href="../../ex-toolbox/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/a&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.</summary>
+    <category term="ex-toolbox" label="ex-toolbox"/>
+    <published>2023-03-09T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20221029.html</id>
+    <title>EX-CommandStation 4.1.2 Release</title>
+    <updated>2022-10-29T00:00:00+00:00</updated>
+    <author>
+      <name>Fred Decker</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="ex-commandstation-4-1-2-release"&gt;
+
+&lt;p&gt;The DCC-EX Team is pleased to release CommandStation-EX v4.1.2 as a Production Release for the general public.
+This release is a Minor release with many significant EXRAIL enhancements and new automation features in addition to some bug fixes.
+The team continues improving the architecture of DCC++EX to make it more flexible and optimizing the code to get more performance from the Arduino (and other) microprocessors. This release includes all of the Point Releases from v4.0.1 to v4.1.2.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;New Command Station &amp;amp; EXRAIL Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ACK defaults are now set to LIMIT 50mA, MIN 2000uS, MAX 20000uS for more compatibility with non NMRA compliant decoders&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Automatically detect and run a myFilter add-on (no need to call setFilter)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New Commands for the Arduino IDE Serial Monitor and JMRI DCC++ Traffic Monitor&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt;/RED signal_id&amp;gt; to turn a individual LED Signal On &amp;amp; Off&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt;/AMBER signal_id&amp;gt; “&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt;/GREEN signal_id&amp;gt; “&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt;/KILL ALL&amp;gt; command to stop all tasks, and Diagnostic messages when KILL is used&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt; t cab&amp;gt; command to obtain current throttle setting&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Allow WRITE CV on PROG&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Updated CV read command . Equivalent to &amp;lt;V cv 0&amp;gt;. Uses the verify callback.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Allow WRITE CV on PROG &amp;lt;W CV VALUE)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Change callback parameters are now optional on PROG&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New JA, JR, JT commands availabe for Throttle Developers to obtain Route, Roster and Turnout descriptions for communications&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New EXRAIL Functions to use in Automation(n), ROUTE(N) &amp;amp; SEQUENCE(N) Scripts&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;ATGTE &amp;amp; ATLT wait for analog value, (At Greater Than or Equal and At Less Than a * certain value)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;FADE command now works for LEDs connected on PCA9685 Servo/Signal board Output vpins&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;FORGET Forgets the current loco in DCC reminder tables saving memory and wasted packets sent to the track&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;“IF” signal detection with IFRED(signal_id), IFAMBER(signal_id), IFGREEN(signal_id)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;KILLALL command to stop all tasks, and Diagnostic messages when KILL is used&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;PARSE &amp;lt;&amp;gt; commands in EXRAIL allows sending of DCC-EX commands from EXRAIL&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SERVO_SIGNAL Servo signals assigned to a specific servo turnout&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SIGNALH High-On signal pins (Arduino normally handles active LOW signals. This allows for active HIGH)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;HIDDEN turnouts (hide a REAL turnout and create a VIRTUAL turnout to handle actions that happen BEFORE a turnout is thrown)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;VIRTUAL_TURNOUT definition&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;EXRAIL Updates&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;EXRAIL BROADCAST(“msg”) sends any message to all throttles/JMRI via serial and WiFi&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;EXRAIL POWERON turns on power to both tracks from EXRAIL (the equivalent of sending the &amp;lt;1&amp;gt; command)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Other Enhancements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;UNO Progmem is optimise to allow for small EXRAIL Automation scripts to run within the limited space for testing purposes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;PCA9685 Servo Signal board supports ‘Nopoweroffleds’, servo pins stay powered on after position reached, otherwise the new FADE would always turn off.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Position servo can use spare servo pin as a GPIO pin.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4.1.2 Bug Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Fixed Ethernet shield W5100 support since it does not report HW or link level like the W5200 and W5500 chips.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;4.1.1 Bug Fixes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Preserve the turnout format&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Parse multiple commands in one buffer string correctly&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fix &amp;lt;/&amp;gt; command signal status in EXRAIL&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Read long loco addresses in EXRAIL&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;FIX negative route IDs in WiThrottle&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See the version.h file for notes about which of the 4.1.2 features were added/changed by point release.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Known Issues&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Wi-Fi - Requires sending &amp;lt;AT&amp;gt; commands from a serial monitor if you want to switch between AP mode and STA station mode after initial setup&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pololu Motor Shield - is supported with this release, but the user may have to adjust timings to enable programming mode due to limitations in its current sensing circuitry&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Contact info:&lt;/div&gt;
+&lt;div class="line"&gt;Name: Fred Decker&lt;/div&gt;
+&lt;div class="line"&gt;Organisation: DCC-EX&lt;/div&gt;
+&lt;div class="line"&gt;Address: 113 Main Street #767, Holly Springs, NC 27540&lt;/div&gt;
+&lt;div class="line"&gt;Phone: +1 919-285-1576&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20221029.html" rel="alternate"/>
+    <summary>The DCC-EX Team is pleased to release CommandStation-EX v4.1.2 as a Production Release for the general public.
+This release is a Minor release with many significant EXRAIL enhancements and new automation features in addition to some bug fixes.
+The team continues improving the architecture of DCC++EX to make it more flexible and optimizing the code to get more performance from the Arduino (and other) microprocessors. This release includes all of the Point Releases from v4.0.1 to v4.1.2.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <published>2022-10-29T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20221023.html</id>
+    <title>EX-CommandStation 4.1.1 Release</title>
+    <updated>2022-10-23T00:00:00+00:00</updated>
+    <author>
+      <name>Fred Decker</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="ex-commandstation-4-1-1-release"&gt;
+
+&lt;p&gt;23 October 2022 - 21:00 USA - Eastern Standard Time&lt;/p&gt;
+&lt;p&gt;With a drum roll playing in the background, I am please to announce that the DCC-EX team has released version 4.1.1.&lt;/p&gt;
+&lt;p&gt;As of last night that is the new official version available for download from our web side. This is considered a minor update but it does include a few bug fixes, the primary one being able to read long loco id’s. Included as well are several technical updates and for the one percent that understand the meaning, I saw coding words such as ACK, ATGTE and ATLT. For the 99 percent of us out there, some of the new features include the ability to fade an led when using a pca9685 board, a KILLALL function that stops all EXRAIL as well as diagnostic command, and new commands to help throttle developers.&lt;/p&gt;
+&lt;p&gt;An interesting thought occurred to me as I was planning the writing of the update. Before it is published it gets the approval from multiple team members. Looking at it in a different light, approval came from the United Kingdom, Sweden, Australia, Canada, as well as the United States. That illustrates why DCC-EX is becoming a dominant player in the control of model railroads. Keep the downloads coming!!&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Contact info:&lt;/div&gt;
+&lt;div class="line"&gt;Name: Fred Decker&lt;/div&gt;
+&lt;div class="line"&gt;Organisation: DCC-EX&lt;/div&gt;
+&lt;div class="line"&gt;Address: 113 Main Street #767, Holly Springs, NC 27540&lt;/div&gt;
+&lt;div class="line"&gt;Phone: +1 919-285-1576&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20221023.html" rel="alternate"/>
+    <summary>23 October 2022 - 21:00 USA - Eastern Standard Time</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <published>2022-10-23T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20220801.html</id>
+    <title>Our New Name</title>
+    <updated>2022-08-01T00:00:00+00:00</updated>
+    <author>
+      <name>Fred Decker</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="our-new-name"&gt;
+
+&lt;p&gt;In order to better fit with our mission and provide a more clear and consistant image as our offerings expand, we have changed our name from &lt;strong&gt;‘DCC++ EX’&lt;/strong&gt; to &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt;, dropping the &lt;strong&gt;‘++’&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We have also changed our product names to have a consistent form of &lt;strong&gt;EX-&amp;lt;product name&amp;gt;&lt;/strong&gt; (without spaces in the product names if there are multiple words).&lt;/p&gt;
+&lt;p&gt;&lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; - &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; - &lt;a href="../../ex-webthrottle/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;WebThrottle&lt;/span&gt;&lt;/a&gt; - &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; - &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt; - &lt;a href="../../ex-dccinspector/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;DCCInspector&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To go along with it we have created logos for the individual products&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="../../ex-commandstation/index.html"&gt;&lt;img alt="EX-CommandStation" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-commandstation.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-installer/index.html"&gt;&lt;img alt="EX-Installer" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-installer.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-webthrottle/index.html"&gt;&lt;img alt="EX-WebThrottle" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-webthrottle.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../exrail/index.html"&gt;&lt;img alt="EXRAIL" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-exrail.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-turntable/index.html"&gt;&lt;img alt="EX-Turntable" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-turntable.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-dccinspector/index.html"&gt;&lt;img alt="EX-DCCInspector" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-dccinspector.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../download/ex-commandstation.html#getting-basestation-classic"&gt;&lt;img alt="baseStationClassic" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-basestationclassic.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To synopsize:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;DCC-EX is the organisation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;EX-CommandStation (or EX-CS) is our command station product&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;section id="why-we-made-the-change"&gt;
+&lt;h2&gt;Why We Made the Change&lt;/h2&gt;
+&lt;p&gt;When we began this journey, we picked up on the work of Gregg E. Berman who created the original Arduino based DCC “Base Station”, called “DCC++”. He chose that name as a play on words between the NMRA’s “Digital Command Control” specification, “DCC”, and the computer programming language used on the Arduino called “C++”. If you put DCC and C++ together, you get DCC++. So DCC++ became the product name. When we extended and ultimately completely rewrote the software inspired by DCC++, we chose the name “DCC++EX” for “DCC++ Extended”. Over time and with much input from users, we decided we needed to make some changes.&lt;/p&gt;
+&lt;p&gt;The first change was calling the “Base Station” a “Command Station”. This better reflected standardised terms used in the model railroading community.&lt;/p&gt;
+&lt;p&gt;We also noticed that there was confusion between our company/team name and the product. “DCC-EX” is the company while DCC++EX was our first product, the Command Station. DCC++EX was being used interchangeably to refer to both the company and the command station. Additionally, DCC++EX is a mouthful, it is difficult to pronounce and requires special characters (the plus signs) when written or typed. This causes issues on places that do not accept plus signs in names, like GitHub and Google.&lt;/p&gt;
+&lt;p&gt;For the above reasons, and since we have long ago expanded byond the original DCC++ project, we felt it was best to drop the “++”. At the same time, we needed to address the fact that we had a growing list of products and trademarks that should be consistent. While “EX” was always in the name, sometimes it was as a prefix and sometimes as a suffix. To remedy this, all our offerings now begin with “EX”, as in “EX-CommandStation” or “EX-CS” for short.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="what-has-not-changed"&gt;
+&lt;h2&gt;What Has Not changed&lt;/h2&gt;
+&lt;p&gt;Everything you knew and loved about what we now call “DCC++ Classic”. We have kept the old DCC++ command language and extended it. Switching to EX-CommandStation from DCC++ is a simple upgrade, and using accessories like throttles that speak the DCC++ command language still work as before (with many improvements).&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="yet-to-do"&gt;
+&lt;h2&gt;Yet To Do&lt;/h2&gt;
+&lt;p&gt;(These still refer to to DCC++EX and will be changed over time) :&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;GitHub&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;FaceBook&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="won-t-do"&gt;
+&lt;h2&gt;Won’t do&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;internal code references the &amp;lt;DCC++&amp;gt; codes/commands&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;span class="ex-suffix"&gt;BaseStationClassic (DCC++)&lt;/span&gt; won’t be renamed but does get a new logo&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20220801.html" rel="alternate"/>
+    <summary>In order to better fit with our mission and provide a more clear and consistant image as our offerings expand, we have changed our name from ‘DCC++ EX’ to &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt;, dropping the ‘++’.</summary>
+    <category term="dcc-ex" label="dcc-ex"/>
+    <published>2022-08-01T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20220201a.html</id>
+    <title>Release Notes</title>
+    <updated>2022-02-01T00:00:00+00:00</updated>
+    <author>
+      <name>Fred Decker</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="release-notes"&gt;
+
+&lt;p&gt;What’s New in Version 4.0&lt;/p&gt;
+&lt;p&gt;You may notice the jump from version 3.x to 4.0, this is because 4.0 is a MAJOR release. There are huge additions and changes. Here is a list of the highlights. To see the full release notes, continue to the link below.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;We developed a Hardware Abstraction Layer (HAL) to allow for snap-in modules for different hardware and accessories. We will be both processor and input/output agnostic. This means you are insulated from the complexity of different hardware. Switches, lights, servos, etc., will all go through the same interface.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Rather than trying to maintain detailed release notes in multiple places, we provide a link below to the original file on our GitHub page. You can read the file there or download it. If you already have installed the Command Station sketch to your local machine, you will have the release notes for the version you download in your &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; project folder. Click on the link below for our most current release notes.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/release_notes.md"&gt;https://github.com/DCC-EX/CommandStation-EX/blob/master/release_notes.md&lt;/a&gt;&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;Note that this will show the release notes for the latest “master” build that you can download and install and may contain changes that are not in the last “official” release. The master version is the current stable version, while the official release is the one bundled and installed from the installer and downloaded from the download link.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20220201a.html" rel="alternate"/>
+    <summary>What’s New in Version 4.0</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <published>2022-02-01T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20220201.html</id>
+    <title>EX-CommandStation 4.0 Release</title>
+    <updated>2022-02-01T00:00:00+00:00</updated>
+    <author>
+      <name>Fred Decker</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="ex-commandstation-4-0-release"&gt;
+
+&lt;p&gt;Announcing version 4.0 of its EX-CommandStation software with EXRAIL automation and accessory control.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Operators can now have a fully automated model railroad or a separate accessory control bus for their entire layout and read CVs up to 8 times faster&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;1 February 2022 - 7am USA - Eastern Standard Time&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Holly Springs, North Carolina USA&lt;/strong&gt; - DCC-EX released the next version of its popular free and open source DCC Command Station software today. Version 4.0 of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; includes the new EXRAIL &lt;sup&gt;tm&lt;/sup&gt; (Extended Railroad Automation Instruction Language) system that revolutionises the way model railroaders can control and interact with their layouts. This new concept allows users to fully automate the operation of their trains and to manage turnouts/points, signals, lights, automations, animations, and virtually any kind of sensor, switch, servo, motor, or output, all with a very simple set of commands.&lt;/p&gt;
+&lt;p&gt;&lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; &lt;sup&gt;tm&lt;/sup&gt; with &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; runs on inexpensive and readily available hardware like the Arduino and Teensy series of microcontrollers and supports standard switches, servos, and accessory boards.&lt;/p&gt;
+&lt;p&gt;Concurrent with this rollout, enhancements to the popular &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; model railroad software and &lt;a class="reference internal" href="throttles/software/engine-driver.html"&gt;&lt;span class="doc"&gt;Engine Driver&lt;/span&gt;&lt;/a&gt; smartphone and tablet app integrate tightly with the new features. Operators can create routes or automation/animation sequences and have them appear as buttons in &lt;a class="reference internal" href="throttles/software/engine-driver.html"&gt;&lt;span class="doc"&gt;Engine Driver&lt;/span&gt;&lt;/a&gt;. Press a button to begin an automation, or drive trains manually and press a button to hand them off to &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; to run everything unattended. Take back control with another press of a button.&lt;/p&gt;
+&lt;p&gt;Users no longer have to search for “sketches” and libraries or learn complicated C++ programming. There is no need to modify the &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; software and risk bringing the whole system down. The only file that needs to be modified is a myAutomation file where simple commands allow the operator to define their devices and tell them what to do when the conditions they specify are triggered. An engine can be sent out from the yard, triggering turnouts/points to engage for a specific route. Along the way, all the signals and crossings operate automatically in response to sensors along the track or timings or other conditions specified by the operator.&lt;/p&gt;
+&lt;p&gt;Animations that involve a sequence, like operating cranes, arc welders, station operations, trolleys, etc. are simple to script. To make it even easier, EXRAIL comes with many standard sequences so that an operator just needs to copy them into their script, load the file into their Command Station and connect their devices. For the first time, everything can be run from the Command Station, without the need for separate devices running custom C++ programs scattered all over the layout.&lt;/p&gt;
+&lt;p&gt;Interfacing with hardware has never been easier with the new HAL (Hardware Abstraction Layer) feature. Supported hardware such as port expander and servo controller boards are automatically detected. New types of hardware can be added by implementing a driver from a standardised interface without having to write a custom program.&lt;/p&gt;
+&lt;p&gt;The new DriveAway &lt;sup&gt;tm&lt;/sup&gt; feature allows users to drive an engine onto a siding or other electrically isolated block used as a programming track. The engine can be programmed and then driven back onto the main section of the layout, all without touching the locomotive.&lt;/p&gt;
+&lt;p&gt;&lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; has enhanced capabilities to read difficult decoders, provide detailed diagnostics to avoid the dreaded “308 Error”,  and when using JMRI with CV values matching what is in the its decoder file, improve performance by a factor of 8x. Reading and writing CVs in general, whether using &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; or another method, is still significantly faster than before.&lt;/p&gt;
+&lt;p&gt;DCC-EX is a global joint effort of a group of developers and engineers located in the US, UK, Sweden, France, Australia, New Zealand, and India. For more information visit their website at &lt;a class="reference external" href="https://www.dcc-ex.com"&gt;https://www.dcc-ex.com&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Contact info:&lt;/div&gt;
+&lt;div class="line"&gt;Name: Fred Decker&lt;/div&gt;
+&lt;div class="line"&gt;Organisation: DCC-EX&lt;/div&gt;
+&lt;div class="line"&gt;Address: 113 Main Street #767, Holly Springs, NC 27540&lt;/div&gt;
+&lt;div class="line"&gt;Phone: +1 919-285-1576&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a class="reference external" href="/_static/documents/press_release_v40.pdf"&gt;PDF version of this pressser for download&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20220201.html" rel="alternate"/>
+    <summary>Announcing version 4.0 of its EX-CommandStation software with EXRAIL automation and accessory control.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <published>2022-02-01T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20201001.html</id>
+    <title>DCC++ VS DCC-EX?</title>
+    <updated>2020-10-01T00:00:00+00:00</updated>
+    <author>
+      <name>Fred Decker</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="dcc-vs-dcc-ex"&gt;
+
+&lt;p&gt;Everything you loved is still there…&lt;/p&gt;
+&lt;p&gt;First, we want to stress that we didn’t break anything!&lt;/p&gt;
+&lt;p&gt;Whether you are using &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; as a controller/front-end to send commands to your track, handle turnouts/points, read and write CVs, or using any other software or the serial monitor, the commands are still the same. We have expanded the API (Application Programming Interface) to add new commands and provide new responses, but they won’t affect your old control methods. One example of a new command is the one to handle turning power on and off to individual tracks.&lt;/p&gt;
+&lt;section id="ex-commandstation-is-all-new"&gt;
+&lt;h2&gt;EX-CommandStation is all new!&lt;/h2&gt;
+&lt;p&gt;While we made minor changes to the original DCC++ “BaseStation-Classic”, all new development is going forward with the &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;. At first, we expanded features, added functionality, and fixed bugs by working from the existing code base.&lt;/p&gt;
+&lt;p&gt;The updated &lt;span class="ex-suffix"&gt;BaseStationClassic (DCC++)&lt;/span&gt; release of DCC++ will be familiar to any of you who played with the code. However, we want to stress that the newer releases, &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;, are a complete re-write from the ground up and is greatly improved.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="what-s-different"&gt;
+&lt;h2&gt;What’s different?&lt;/h2&gt;
+&lt;p&gt;We added many new functions such as:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Individual track power control&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Programming track turned on automatically when programming and off when finished&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;User add-on functions (intercept commands to route to your own routines)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Much simpler Function (F0-28) command&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; Automation and/or accessory control&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;HAL - Hardware abstraction layer to make adding new types of hardware simple&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Extended functions up to 68&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Better turnout/point handling&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Servo support&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Built-in &lt;a class="reference internal" href="reference/software/withrottle-vs-native-commands.html"&gt;&lt;span class="doc"&gt;wiThrottle Server&lt;/span&gt;&lt;/a&gt; to directly support &lt;a class="reference internal" href="reference/software/withrottle-vs-native-commands.html"&gt;&lt;span class="doc"&gt;wiThrottle Protocol&lt;/span&gt;&lt;/a&gt; based throttles&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Built-in support for the LCN node based accessory bus&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Support for more motor drivers&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Easy to create motor definition for motor drivers not in our current list&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;LCD and OLED display support&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;WiFi, Ethernet, and Bluetooth support&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;An easy to use Installer&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Nano and Teensy support&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ARM Cortex M0 and M4 support&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; features added to &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; like a current monitor display&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Custom add-ons for &lt;a class="reference internal" href="throttles/software/engine-driver.html"&gt;&lt;span class="doc"&gt;Engine Driver&lt;/span&gt;&lt;/a&gt; including Routes and Automations on buttons&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;28 speed step support in addition to 128&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Extensive logs and diagnostics in a serial monitor or the &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; DCC++ log window&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Created many new commands&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Developed a new browser based throttle (&lt;a class="reference internal" href="ex-webthrottle/index.html"&gt;&lt;span class="doc"&gt;EX-WebThrottle&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New “DriveAway” feature to be able to recognise a loco on a siding used as a programming track and drive off of onto the main track&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;… and much, much more.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="how-did-we-do-it"&gt;
+&lt;h2&gt;How did we do it?&lt;/h2&gt;
+&lt;p&gt;We assembled a team of software developers and electronics engineers from around the world, created a plan, and started work early in 2020. (See the team information and credits on the &lt;a class="reference internal" href="about/index.html"&gt;&lt;span class="doc"&gt;About page&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;We started with the DCC Signal Generation code, what we call the “Waveform Generator”. We got together as a team and looked at how we could make it better. It soon became clear that rather than make piecemeal changes, the entire concept of how the signal could be generated, and how to use timers and interrupts, would need to be re-imagined. This not only sped things up considerably, but allowed us to allow you to connect some shields right on top of your Command Station board without jumpers!&lt;/p&gt;
+&lt;p&gt;Next we focused on packet generation. We looked at the complexities of reading and maintaining code that was using binary math, multiple “registers” to hold train data, and doing bit shifting everywhere to build bytes and stuff them into data packets. The new method gets rid of the old registers and simplifies the whole structure for building packets. Things like start and stop bits and preamble bits are static pieces of information. So being able to just insert them where they need to go saves time and processor bandwidth.&lt;/p&gt;
+&lt;p&gt;We created an internal API for how modules communicated with each other, so the code is more modular and each unit is dedicated to its specific task.&lt;/p&gt;
+&lt;p&gt;We completely re-wrote current sense and ACK detect routines to better protect your trains and make programming more accurate. There are complete diagnostics to allow you to see see exactly why a particular decoder is not reading or writing, and we provide settings you can add to your configuration to get it to work in most cases.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="why-did-we-do-this"&gt;
+&lt;h2&gt;Why did we do this?&lt;/h2&gt;
+&lt;p&gt;First and foremost, we just wanted to have fun. We saw an engineering problem and we wanted to tackle it. As is the case with most engineers, we thought we could do it better than anyone else. ;) Second, we saw an opportunity to provide something really amazing to the Model Railroad Community for low cost and that worked as well or better than anything on the market.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="details-to-make-engineer-s-propellers-spin"&gt;
+&lt;h2&gt;Details to Make Engineer’s Propellers Spin&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="../../begin/levels.html#engineer"&gt;&lt;img alt="Engineer Hat" src="https://dcc-ex.com/_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We needed a platform that would allow us to grow into the future. The first thing we found was that in order to allow easy changes and to be able to adapt to technology we might want to use going forward, the code needed to be more modular. Each unit needed to be a “black box” that either did just one task and did it well, or take input and generate output without having to know anything about the module it was communicating with. Therefore, we created an internal API through which the modules could communicate. By simply unplugging one unit and plugging in another we could continue to work using different devices. An example of this is input and output. It doesn’t matter whether &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; is sending commands to the &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; or if it is a wireless Cab Controller. It doesn’t matter if the output device is the serial monitor or an I&lt;sup&gt;2&lt;/sup&gt;C display. It doesn’t matter if you want to use a serial port or a network device to route data. This makes it very easy to implement new features with new devices. We just have to create a small interface for whatever new device we want to implement. This has the side benefit of allowing the code to be more readable.&lt;/p&gt;
+&lt;p&gt;Next, the Waveform Generator needed 2 timers and interrupts, one for the Main track signal and one for the Programming track. The Uno only has 3 timers. So 2 of them were already tied up for sending the DCC signal. Since the programming track sits idle most of the time, and both signals were always being generated to the input of the motor board, processing power was being wasted that could be put to use for something else. In addition, because of the way the Arduino is designed, we were forced to use jumpers to connect pins on the Arduino to those on the motor board. Our new design eliminates the need for jumpers!&lt;/p&gt;
+&lt;p&gt;The packet generation routine was complex, hard to maintain, and limited us with regard to the hardware we could run on and new features we could implement (like the Railcom cut-out). We replaced the slow DigitalRead() and DigitalWrite() routines with a fast write library. The packet generation is now streamlined, fast (which allows us to be able to use only 1 timer to create signals for 2 tracks), and much easier to read.&lt;/p&gt;
+&lt;p&gt;We made a huge effort to streamline the code and optimise it for microcontrollers to use the limited memory we have available in the most efficient manner. The code is now object oriented and utilises classes for readability and reusability. We eliminated almost all use of strings.&lt;/p&gt;
+&lt;p&gt;The 3 most requested features were: 1. More reliable CV read and writes, 2. Better accessory control, 3. Automation. Some have requested a Railcom cut-out. We haven’t limited ourselves to just these features, but we put a lot of time into redesigning things to accommodate them.&lt;/p&gt;
+&lt;p&gt;The current detection routines are completely different. One key difference is all current readings are in milliAmps (mA) instead of meaningless pin readings. So if you want to set your overload protection to kick in at 3 Amps, you just enter 3000 for 3000mA instead of looking up a value from a table.&lt;/p&gt;
+&lt;p&gt;We continue to test all the motorboard and Arduino combinations at different voltages to refine our current readings. This is important because we want to have accurate and fast short-circuit detection, and because the reason CV reading was occasionally unreliable in the past was due to not always sensing a current pulse on the track. In addition to more accurately reading current, we had to completely change the way we look for an “ACK” (acknowledgement from the train that it received a command). So we now check immediately after we send a command instead of waiting for a dozen or more packets. This means we don’t miss an ACK while this is happening, and we jump out of sending unnecessary packets as soon as we get one. We also use our knowledge of CVs and the probability of what a CV may contain, so save time by skipping ahead if our first guess is correct. You will appreciate how much faster we can read CVs now!&lt;/p&gt;
+&lt;p&gt;There are now full diagnostics for trying to determine why a particular decoder may not be reading or writing correctly and new commands to adjust parameters to deal with decoders that are not in compliance with NMRA specifications. We use resolution down to the microsecond.&lt;/p&gt;
+&lt;p&gt;We not only are working on a RailCom cutout within the Command Station, but are developing a way of reading the RailCom data and reporting it.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="automation"&gt;
+&lt;h2&gt;Automation&lt;/h2&gt;
+&lt;p&gt;&lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; (Extended Railroad Automation Interface for Layouts) brings new capability to the world of automation. You don’t have to be a programmer to write a script that tells a train to start moving forward at a set speed until some action (like reaching a sensor) occurs! We will be providing a document and tutorial on EXRAIL once Beta testing is complete. This will be an open-ended project, since who knows what things people will come up with that they want to automate! It will be easy to extend the commands to handle whatever your imagination can dream of.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="the-bottom-line"&gt;
+&lt;h2&gt;The bottom line&lt;/h2&gt;
+&lt;p&gt;So while maintaining proper deference to Gregg Berman’s original concept of an inexpensive Command Station based on the Arduino platform, we don’t want to do a disservice to &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; or developers like Chris Harlow (UkBloke), Harald Barth, Neil McKechnie, Dave Cutting, and others, who brought a new vision to the project, and who used very little of the original code. This is NOT DCC++ v2.0, this is a completely new, yet API and feature compatible, Command Station. And just a tease: What Command Station would be complete without a wireless Cab Controller that speaks DCC++? Keep looking at our web page for new announcements…&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="thanks"&gt;
+&lt;h2&gt;Thanks&lt;/h2&gt;
+&lt;p&gt;This is a team effort. There are a dedicated and organised group of about 15-20 core people involved in the project. In addition, there is all of you who contribute with your comments, feature ideas, evangelizing and testing. So we give you our heartfelt thanks. We will see you online!&lt;/p&gt;
+&lt;p&gt;Click here for &lt;a class="reference internal" href="about/index.html"&gt;&lt;span class="doc"&gt;The DCC-EX Team Credits&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fred Decker
+October 2020&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20201001.html" rel="alternate"/>
+    <summary>Everything you loved is still there…</summary>
+    <category term="ex-commandstationdcc-exdcc++" label="ex-commandstation dcc-ex dcc++"/>
+    <published>2020-10-01T00:00:00+00:00</published>
+  </entry>
+</feed>
